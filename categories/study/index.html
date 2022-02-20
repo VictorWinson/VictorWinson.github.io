@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>Category: study - Winson&#039;s tech &amp; live</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Winson&#039;s tech &amp; live"><meta name="msapplication-TileImage" content="/img/milk-bottle.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Winson&#039;s tech &amp; live"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Winson&#039;s tech &amp; live"><meta property="og:url" content="http://victorwinson.github.io/"><meta property="og:site_name" content="Winson&#039;s tech &amp; live"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://victorwinson.github.io/img/og_image.png"><meta property="article:author" content="VictorWinson"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://VictorWinson.github.io"},"headline":"Winson's tech & live","image":["http://victorwinson.github.io/img/og_image.png"],"author":{"@type":"Person","name":"VictorWinson"},"publisher":{"@type":"Organization","name":"Winson's tech & live","logo":{"@type":"ImageObject","url":"http://victorwinson.github.io/img/milk-bottle.svg"}},"description":""}</script><link rel="icon" href="/img/milk-bottle.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/milk-bottle.svg" alt="Winson&#039;s tech &amp; live" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">about</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">Categories</a></li><li class="is-active"><a href="#" aria-current="page">study</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-02-20T13:14:36.000Z" title="2/20/2022, 9:14:36 PM">2022-02-20</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-02-20T13:27:55.352Z" title="2/20/2022, 9:27:55 PM">2022-02-20</time></span><span class="level-item"><a class="link-muted" href="/categories/study/">study</a></span><span class="level-item">3 minutes read (About 429 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/20/learn-to-use-git/">learn to use git</a></h1><div class="content"><p>git</p>
+<p>[toc]</p>
+<h1><span id="jargon">Jargon</span><a href="#jargon" class="header-anchor">#</a></h1><ul>
+<li><p>Tree<br>folder</p>
+</li>
+<li><p>Blob<br>file</p>
+</li>
+<li><p>Working tree<br>Where all files exist</p>
+</li>
+</ul>
+<p><em>dose it contains files that is not added?</em></p>
+<ul>
+<li><p>Staging area(Index)<br>What added and are going to be contain in next commit will be in the staging area</p>
+</li>
+<li><p>Repository<br>Database that stores the history of the project</p>
+</li>
+</ul>
+<hr>
+<h1><span id="basic-use">basic use</span><a href="#basic-use" class="header-anchor">#</a></h1><h3><span id="tree-status">Tree status</span><a href="#tree-status" class="header-anchor">#</a></h3><ol>
+<li><p>Dirty/modified<br>None of the modified files have been added for next commit</p>
+</li>
+<li><p>Staged<br>Some of the files have been added and can be commit now</p>
+</li>
+<li><p>Committed<br>Change have been stored safely in a snapshot(commit)</p>
+</li>
+</ol>
+<h3><span id="file-status">File status</span><a href="#file-status" class="header-anchor">#</a></h3><ol>
+<li><p>Tracked<br>Were part of last snapshot or newly added to the stage</p>
+<ul>
+<li>modified: have changed but not yet added</li>
+<li>unmodified: haven&#x2019;t changed</li>
+<li>staged: have changed and add to stage or newly added to the stage</li>
+</ul>
+</li>
+<li><p>Untracked<br>Not part of last snapshot nor are in the staging area</p>
+</li>
+</ol>
+<h2><span id="commands">commands</span><a href="#commands" class="header-anchor">#</a></h2><h3><span id="git-commit">git commit</span><a href="#git-commit" class="header-anchor">#</a></h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> commit -a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>include all the tracked files including modified but not staged ones</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> commit -m<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>add a commit message in the commit command rather than use a default editor to write one</p>
+<h3><span id="git-stash">git stash</span><a href="#git-stash" class="header-anchor">#</a></h3><p>To store dirty files in a special stack</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> stash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>to store all dirty files</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> stash list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>show previous stashes</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> stash apply<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>apply latest stash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> stash apply stash@<span class="token punctuation">{</span>num<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>apply specific stash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> stash drop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>same as apply only clear the stash instead of applying</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> stash pop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>same as apply only drop it after apply it</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> stash <span class="token function">clear</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>clear all the stashes</p>
+<h3><span id="git-merge">git merge</span><a href="#git-merge" class="header-anchor">#</a></h3><p>Merge two branches</p>
+<h3><span id="git-fetch">git fetch</span><a href="#git-fetch" class="header-anchor">#</a></h3><p>To get the remote branches that not on local repository</p>
+<h3><span id="git-pull">git pull</span><a href="#git-pull" class="header-anchor">#</a></h3><p>Combination of git fetch and git merge</p>
+<h3><span id="git-push">git push</span><a href="#git-push" class="header-anchor">#</a></h3><p>Push a branch to remote</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push <span class="token operator">&lt;</span>remote<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>local branch<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>rename as<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>push a brach to remote but use a different name</p>
+<h3><span id="git-branch">git branch</span><a href="#git-branch" class="header-anchor">#</a></h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> branch -u <span class="token operator">&lt;</span>remote<span class="token operator">&gt;</span>/<span class="token operator">&lt;</span>remote branch<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>set up to stream with remote branch</p>
+<h3><span id="git-rebase">git rebase</span><a href="#git-rebase" class="header-anchor">#</a></h3><p>Redo the changes made to one branch since the branching to the another branch. This will make the changes are made in series not in parallel</p>
+<h3><span id="git-remote">git remote</span><a href="#git-remote" class="header-anchor">#</a></h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote <span class="token function">add</span> origin <span class="token punctuation">[</span>git@url:port<span class="token punctuation">]</span>:path/project.git
+
+<span class="token comment"># change the remote HEAD of origin to develop branch </span>
+<span class="token function">git</span> remote set-head origin develop
+
+<span class="token comment"># set default push branch</span>
+<span class="token function">git</span> branch --set-upstream-to<span class="token operator">=</span>origin/mac<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3><span id="git-checkout">git checkout</span><a href="#git-checkout" class="header-anchor">#</a></h3><p><code>git checkout</code> change into the situation of a commit<br><code>-b</code> create a new branch and change into it</p>
+<h3><span id="git-diff">git diff</span><a href="#git-diff" class="header-anchor">#</a></h3><p><code>git diff</code> diff a file between different commit</p>
+<hr>
+<h2><span id="branching-change-and-merging">Branching change and merging</span><a href="#branching-change-and-merging" class="header-anchor">#</a></h2><p>If meeting merge conflict, try to automatically fix it, if can&#x2019;t, report it.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-02-20T13:03:06.000Z" title="2/20/2022, 9:03:06 PM">2022-02-20</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-02-20T13:15:27.768Z" title="2/20/2022, 9:15:27 PM">2022-02-20</time></span><span class="level-item"><a class="link-muted" href="/categories/study/">study</a></span><span class="level-item">11 minutes read (About 1720 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/20/computer-network/">computer network</a></h1><div class="content"><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#yao-xue-shi-me">&#x8981;&#x5B66;&#x4EC0;&#x4E48;</a></li>
+<li><a href="#internet-xu-yao-shi-me">internet &#x9700;&#x8981;&#x4EC0;&#x4E48;</a></li>
+<li><a href="#jargon">jargon</a><ul>
+<li><a href="#what-is-the-internet">what is the internet</a></li>
+<li><a href="#network-edge">network edge</a></li>
+<li><a href="#network-core">network core</a><ul>
+<li><a href="#routing-table">routing table</a></li>
+<li><a href="#datagrame-udp">datagrame(udp)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#computer-network">computer network</a><ul>
+<li><a href="#packet">packet</a><ul>
+<li><a href="#old-time-packets-look-like-this">old time packets look like this.</a></li>
+<li><a href="#new-pockets">new pockets</a></li>
+</ul>
+</li>
+<li><a href="#layering">layering</a><ul>
+<li><a href="#feature">feature</a></li>
+<li><a href="#example">example</a></li>
+<li><a href="#why-layering">why layering?</a></li>
+</ul>
+</li>
+<li><a href="#encapsulate">encapsulate</a><ul>
+<li><a href="#upper-layers-don-t-have-to-worry-about-what-is-the-next-layer">upper layers don&#x2019;t have to worry about what is the next layer.</a></li>
+<li><a href="#example-1">example</a></li>
+<li><a href="#compare-vpn-packet-and-a-normal-one">compare VPN packet and a normal one</a></li>
+</ul>
+</li>
+<li><a href="#byte-order">byte order</a><ul>
+<li><a href="#when-programming-a-network-application">when programming a network application</a></li>
+</ul>
+</li>
+<li><a href="#ipv4">ipv4</a><ul>
+<li><a href="#example-2">example</a></li>
+<li><a href="#net-mask">net mask</a></li>
+<li><a href="#address-structure">address structure</a></li>
+<li><a href="#classless-inter-domain-routing-cidr">Classless Inter-Domain Routing(CIDR)</a></li>
+</ul>
+</li>
+<li><a href="#longest-prefix-match-algorithm">longest prefix match(algorithm)</a></li>
+<li><a href="#arp-address-resolution-protocol">ARP (Address Resolution Protocol)</a></li>
+<li><a href="#tcp-service-model">TCP service model</a><ul>
+<li><a href="#reliable">reliable</a></li>
+<li><a href="#end2end">end2end</a></li>
+<li><a href="#bidirection">bidirection</a></li>
+<li><a href="#3-hand-shakes">3 hand shakes</a></li>
+<li><a href="#transmit-in-segments">transmit in segments</a></li>
+<li><a href="#teardown-the-connection">teardown the connection</a></li>
+<li><a href="#summary">summary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#congestion-control">congestion control</a><ul>
+<li><a href="#timeout">timeout</a></li>
+<li><a href="#3-duplicate-acks">3 duplicate ACKs</a></li>
+<li><a href="#tcp-tahoe-always-sets-cwnd-to-1-timeout-or-3-duplicate-acks">TCP Tahoe always sets cwnd to 1 (timeout or 3 duplicate acks)</a></li>
+</ul>
+</li>
+<li><a href="#ip">IP</a><ul>
+<li><a href="#sdn-software-designed-network">SDN(software designed network)</a></li>
+<li><a href="#atm-mian-xiang-lian-jie-de-san-ceng-jiao-huan-ji">ATM(&#x9762;&#x5411;&#x8FDE;&#x63A5;&#x7684;&#x4E09;&#x5C42;&#x4EA4;&#x6362;&#x673A;)</a></li>
+<li><a href="#router-filter">router filter</a></li>
+<li><a href="#mac">MAC</a><ul>
+<li><a href="#multiple-access-links-protocols">multiple access links protocols</a></li>
+<li><a href="#mac-address-and-arp">MAC address and ARP</a></li>
+<li><a href="#ethernet">ethernet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#others">others</a></li>
+<li><a href="#security">security</a><ul>
+<li><a href="#cryptography-and-its-many-uses-beyond-confidentiality">cryptography and its many uses beyond &#x201C;confidentiality&#x201D;</a></li>
+<li><a href="#authentication">authentication</a></li>
+<li><a href="#message-integrity">message integrity</a></li>
+<li><a href="#availability">availability</a></li>
+<li><a href="#firewalls-and-intrusion-detection-systems">firewalls and intrusion detection systems</a></li>
+<li><a href="#security-in-application-transport-network-link-layers">security in application, transport, network, link layers</a></li>
+</ul>
+</li>
+<li><a href="#review">review</a><ul>
+<li><a href="#du-shi-da-ti">&#x90FD;&#x662F;&#x5927;&#x9898;</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="yao-xue-shi-me">&#x8981;&#x5B66;&#x4EC0;&#x4E48;</span><a href="#yao-xue-shi-me" class="header-anchor">#</a></h1><ul>
+<li>&#x7535;&#x5B50;&#x8BBE;&#x5907;&#x4E2D;&#x95F4;&#x4F20;&#x9012;&#x4FE1;&#x606F;</li>
+<li>&#x600E;&#x4E48;&#x5B9E;&#x73B0;</li>
+</ul>
+<h1><span id="internet-xu-yao-shi-me">internet &#x9700;&#x8981;&#x4EC0;&#x4E48;</span><a href="#internet-xu-yao-shi-me" class="header-anchor">#</a></h1><ul>
+<li>&#x8BBE;&#x65BD;</li>
+<li>&#x670D;&#x52A1;</li>
+<li>&#x534F;&#x8BAE;</li>
+</ul>
+<h1><span id="jargon">jargon</span><a href="#jargon" class="header-anchor">#</a></h1><table>
+<thead>
+<tr>
+<th align="center">&#x82F1;&#x6587;</th>
+<th align="center">&#x4E2D;&#x6587;</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">transmission</td>
+<td align="center">&#x7F51;&#x5361;&#x653E;01&#x4EE3;&#x7801;&#x901F;&#x5EA6;</td>
+</tr>
+<tr>
+<td align="center">host(end systems)</td>
+<td align="center">&#x7EC8;&#x7AEF;</td>
+</tr>
+<tr>
+<td align="center">switch</td>
+<td align="center">&#x4EA4;&#x6362;&#x673A;&#xFF08;&#x901A;&#x5E38;&#x6307;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#x4EA4;&#x6362;&#x673A;&#xFF09;</td>
+</tr>
+<tr>
+<td align="center">router</td>
+<td align="center">&#x8DEF;&#x7531;&#x5668;&#xFF08;&#x7F51;&#x7EDC;&#x5C42;&#xFF09;</td>
+</tr>
+<tr>
+<td align="center">path</td>
+<td align="center">=route &#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td align="center">package switch</td>
+<td align="center">&#x628A;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x5206;&#x6BB5;&#x540E;&#x53D1;&#x9001;</td>
+</tr>
+<tr>
+<td align="center">secret switch</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">transmission rate</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">protocol</td>
+<td align="center">&#x8BED;&#x4E49; &#x8BED;&#x6CD5; &#x65F6;&#x5E8F; <br> format, syntax(order), actions taken</td>
+</tr>
+<tr>
+<td align="center">frame</td>
+<td align="center">&#x7F51;&#x5361;&#x5B9E;&#x73B0;package&#x5230;frame</td>
+</tr>
+<tr>
+<td align="center">package</td>
+<td align="center">&#x8F6F;&#x4EF6;&#x5C01;&#x5305;</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Web</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">VoIP</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">email</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">games</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">e-commerce</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">social nets</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">client</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">server</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">physical media</td>
+<td align="center">&#x4F20;&#x8F93;&#x5A92;&#x4ECB;</td>
+</tr>
+<tr>
+<td align="center">network core</td>
+<td align="center">routers, switch, network of networks</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">core switch</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">distribution switch</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">access switch</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ITU</td>
+<td align="center">&#x56FD;&#x9645;&#x7535;&#x4FE1;&#x8054;&#x76DF;</td>
+</tr>
+<tr>
+<td align="center">RFC</td>
+<td align="center">Request For Comment &#x534F;&#x8BAE;&#x8BA4;&#x5B9A;&#x7EC4;&#x7EC7;</td>
+</tr>
+<tr>
+<td align="center">IEDF</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ISP</td>
+<td align="center">Internet Service Providers</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">TCP</td>
+<td align="center">Transmission Control Protocol</td>
+</tr>
+<tr>
+<td align="center">UDP</td>
+<td align="center">User Datagram Protocol</td>
+</tr>
+<tr>
+<td align="center">ICMP</td>
+<td align="center">Internet Control Message Protocol (ping)</td>
+</tr>
+<tr>
+<td align="center">IP</td>
+<td align="center">Internet Protocol</td>
+</tr>
+<tr>
+<td align="center">SMTP</td>
+<td align="center">Simple Mail Transfer Protocol</td>
+</tr>
+<tr>
+<td align="center">SNMP</td>
+<td align="center">Simple Network Management Protocol</td>
+</tr>
+<tr>
+<td align="center">IMAP</td>
+<td align="center">Internet Message Access Protocol</td>
+</tr>
+<tr>
+<td align="center">POP</td>
+<td align="center">Post Office Protocol</td>
+</tr>
+<tr>
+<td align="center">HTTP</td>
+<td align="center">Hyper Text Transfer Protocol</td>
+</tr>
+<tr>
+<td align="center">DNS</td>
+<td align="center">Domain Name System protocol</td>
+</tr>
+<tr>
+<td align="center">FTP</td>
+<td align="center">File Transport Protocol</td>
+</tr>
+<tr>
+<td align="center">DHCP</td>
+<td align="center">Dynamic Host Configuration Protocol</td>
+</tr>
+<tr>
+<td align="center">ARP/RARP</td>
+<td align="center">Address Resolution Protocol</td>
+</tr>
+<tr>
+<td align="center">RIP</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">PPP</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>sends packet of data<br>&#x4E3B;&#x8981;&#x53D7;&#x9650;&#x56E0;&#x7D20;&#xFF0C;&#x7F51;&#x5361;&#x6570;&#x636E;&#x8F6C;&#x5316;01&#x901F;&#x5EA6;&#xFF0C;&#x7F51;&#x7EBF;&#x4F20;&#x8F93;&#x65F6;&#x95F4;&#x5FFD;&#x7565;&#x4E0D;&#x8BA1;<br>packet transmission delay = time needed to transmit L-bit packet into link = $\frac{L(bits)}{R(bits/sec)}$</p>
+<ul>
+<li>delay comes from transmission time consuming and queueing time consuming  </li>
+<li>lost comes from no buffer in any hop</li>
+</ul>
+<p>switch &#x53EA;&#x5173;&#x5FC3;&#x7269;&#x7406;&#x548C;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;<br>router &#x5173;&#x5FC3;&#x7269;&#x7406;&#x5C42;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#x548C;&#x7F51;&#x7EDC;&#x5C42;</p>
+<h2><span id="what-is-the-internet">what is the internet</span><a href="#what-is-the-internet" class="header-anchor">#</a></h2><h2><span id="network-edge">network edge</span><a href="#network-edge" class="header-anchor">#</a></h2><h2><span id="network-core">network core</span><a href="#network-core" class="header-anchor">#</a></h2><ul>
+<li>mesh of interconnected routers</li>
+<li>packet-switching: store-and-forward</li>
+</ul>
+<h3><span id="routing-table">routing table</span><a href="#routing-table" class="header-anchor">#</a></h3><ul>
+<li>base on routing algorithms to calculate the dynamic routing table</li>
+</ul>
+<p>PDU | protocol data unit|&#x534F;&#x8BAE;&#x5934;&#x52A0;&#x5185;&#x5BB9;</p>
+<h3><span id="datagrame-udp">datagrame(udp)</span><a href="#datagrame-udp" class="header-anchor">#</a></h3><ol>
+<li>&#x65E0;&#x8FDE;&#x63A5;</li>
+<li>&#x4E0D;&#x53EF;&#x9760;</li>
+<li>&#x987A;&#x5E8F;&#x65E0;&#x6CD5;&#x4FDD;&#x969C;</li>
+</ol>
+<h1><span id="computer-network">computer network</span><a href="#computer-network" class="header-anchor">#</a></h1><h2><span id="packet">packet</span><a href="#packet" class="header-anchor">#</a></h2><h3><span id="old-time-packets-look-like-this">old time packets look like this.</span><a href="#old-time-packets-look-like-this" class="header-anchor">#</a></h3><table>
+<thead>
+<tr>
+<th align="center">content</th>
+<th align="center">header</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">xxxxxxx</td>
+<td align="center">des C B A</td>
+</tr>
+</tbody></table>
+<ul>
+<li>The data transport form source to A, and when A find B is the next hop in the header and send it to B.</li>
+<li>Eventually the packet will be sent to the destination.</li>
+<li>And since <strong>all the hops are list in the packet</strong> that every router can see it, that is unsafe. So they come up with a new one.</li>
+</ul>
+<h3><span id="new-pockets">new pockets</span><a href="#new-pockets" class="header-anchor">#</a></h3><ul>
+<li>When shake hands and open connection, all the routers will record where to send if the destination is this one in a table like this.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">destination</th>
+<th align="center">where to send</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">des</td>
+<td align="center">B</td>
+</tr>
+</tbody></table>
+<ul>
+<li>So the pockets will <strong>only contains the destination</strong>.</li>
+<li>And when router receive a pocket it go look up it in the table and sent it to the next hop.</li>
+</ul>
+<h2><span id="layering">layering</span><a href="#layering" class="header-anchor">#</a></h2><h3><span id="feature">feature</span><a href="#feature" class="header-anchor">#</a></h3><ul>
+<li><strong>only communicate</strong> with the <strong>layer above or below</strong>.</li>
+<li>a massage goes form the toppest layer(<strong>application layer</strong>) all the way to the bottom(<strong>physic layer</strong>), and then gose all the way to the top again to reach the destination.</li>
+</ul>
+<h3><span id="example">example</span><a href="#example" class="header-anchor">#</a></h3><ul>
+<li>edit (source code) compile (object code) link (executable) execute</li>
+</ul>
+<h3><span id="why-layering">why layering?</span><a href="#why-layering" class="header-anchor">#</a></h3><ol>
+<li>modularity</li>
+<li>well defined service</li>
+<li>reuse</li>
+<li>separation of concerns</li>
+<li>continuous improvement</li>
+<li>p2p communications</li>
+</ol>
+<h2><span id="encapsulate">encapsulate</span><a href="#encapsulate" class="header-anchor">#</a></h2><h3><span id="upper-layers-don-t-have-to-worry-about-what-is-the-next-layer">upper layers don&#x2019;t have to worry about what is the next layer.</span><a href="#upper-layers-don-t-have-to-worry-about-what-is-the-next-layer" class="header-anchor">#</a></h3><h3><span id="example">example</span><a href="#example" class="header-anchor">#</a></h3><ul>
+<li>when the tcp change it&#x2019;s algorism http don&#x2019;t need to worry about how to change into tcp, they can work both on the old tcp and the new one.</li>
+</ul>
+<h3><span id="compare-vpn-packet-and-a-normal-one">compare VPN packet and a normal one</span><a href="#compare-vpn-packet-and-a-normal-one" class="header-anchor">#</a></h3><ul>
+<li>wireless frame/ip/tcp/tls/ip/tcp/http</li>
+<li>wireless frame/ip/tcp/http</li>
+</ul>
+<h2><span id="byte-order">byte order</span><a href="#byte-order" class="header-anchor">#</a></h2><table>
+<thead>
+<tr>
+<th align="center">byte order</th>
+<th align="center">big endian</th>
+<th align="center">small endian</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">order</td>
+<td align="center">the first byte place in the first address</td>
+<td align="center">the last byte place in the first address</td>
+</tr>
+<tr>
+<td align="center">use in what cpu</td>
+<td align="center">amd intel</td>
+<td align="center">arm</td>
+</tr>
+</tbody></table>
+<h3><span id="when-programming-a-network-application">when programming a network application</span><a href="#when-programming-a-network-application" class="header-anchor">#</a></h3><ul>
+<li>remember how many time you convert or you will be facing lots of bugs.</li>
+</ul>
+<h2><span id="ipv4">ipv4</span><a href="#ipv4" class="header-anchor">#</a></h2><ul>
+<li>32 bit long</li>
+</ul>
+<h3><span id="example">example</span><a href="#example" class="header-anchor">#</a></h3><ul>
+<li>a.b.c.d (each letter represent a number from 0-255 which is an <em><strong>octect</strong></em> of binary number) <blockquote>
+<p><em>an <strong>octect</strong> is a 8 digits number</em></p>
+</blockquote>
+</li>
+</ul>
+<h3><span id="net-mask">net mask</span><a href="#net-mask" class="header-anchor">#</a></h3><ul>
+<li>which ranger of ip are local that don&#x2019;t need to go through a router</li>
+<li>when you send a package and whenever the netmask is 1 the corresponding binary digits of you ip address and desitination address are the same you are in the same local network.</li>
+</ul>
+<h3><span id="address-structure">address structure</span><a href="#address-structure" class="header-anchor">#</a></h3><ul>
+<li>Class A: first bit is 0 and next 7 bit is network and last 24 is hosts</li>
+<li>Class B: first 2 bit is 1 0 and next 14 bit is network and last 16 is hosts</li>
+<li>Class C: first 3 bit is 1 1 0 and next 21 bit is network and last 8 is hosts</li>
+</ul>
+<h3><span id="classless-inter-domain-routing-cidr">Classless Inter-Domain Routing(CIDR)</span><a href="#classless-inter-domain-routing-cidr" class="header-anchor">#</a></h3><ul>
+<li>use slash and a number to descibe the length of the prefix(netmask)</li>
+<li>/16 means the netmask is 16 bit of binary number which left 16 bit which is 65536 ipv4 addresses under the domain.</li>
+<li>similarly, /24 describes 256 addresses and /20 describes 4096 address.</li>
+</ul>
+<h2><span id="longest-prefix-match-algorithm">longest prefix match(algorithm)</span><a href="#longest-prefix-match-algorithm" class="header-anchor">#</a></h2><ul>
+<li>it is a algorithm to decide how to forward a packet</li>
+<li>if a packet arrives and there isn&#x2019;t a more specific match in the forwarding table than the default one, it will sent it through the default one.</li>
+<li>forwarding table is a set of CIDR entries. an address can match multiple entries. <strong>base on prefix length</strong> to decide which is more specific.</li>
+</ul>
+<h2><span id="arp-address-resolution-protocol">ARP (Address Resolution Protocol)</span><a href="#arp-address-resolution-protocol" class="header-anchor">#</a></h2><ul>
+<li>only works in local network</li>
+<li>every node keep a cache of mapping of IP addresses to the link layer addresses(MAC).</li>
+</ul>
+<ol>
+<li>When the node need to send a packet to an IP address:<ul>
+<li>If it has it in the cache it send it directly.(jump to 4)</li>
+<li>If it does not have the cache it will broadcast a request that ask &#x201C;who have IP x.x.x.x tell x.x.x.x(itself) at xx:xx:xx:xx:xx:xx(MAC)&#x201D;</li>
+</ul>
+</li>
+<li>The node that have the specific IP will respond &#x201C;I hve network address x.x.x.x and my link layer addresses is xx:xx:xx:xx:xx:xx&#x201D;(not broadcast). And to the rest nodes in the network when they overhear the request, they can insert or refresh their ARP mapping in the cache.</li>
+<li>The node that send the request will generate a mapping of link layer addresses and IP addresses.</li>
+</ol>
+<h2><span id="tcp-service-model">TCP service model</span><a href="#tcp-service-model" class="header-anchor">#</a></h2><h3><span id="reliable">reliable</span><a href="#reliable" class="header-anchor">#</a></h3><ul>
+<li>Make sure every segment is well received without missing.</li>
+<li>Flow-control prevents overrunning receiver.(tells the sender how many room in receiver&#x2019;s buffer)</li>
+</ul>
+<h3><span id="end2end">end2end</span><a href="#end2end" class="header-anchor">#</a></h3><h3><span id="bidirection">bidirection</span><a href="#bidirection" class="header-anchor">#</a></h3><h3><span id="3-hand-shakes">3 hand shakes</span><a href="#3-hand-shakes" class="header-anchor">#</a></h3><ol>
+<li>SYN (synchronize)<ul>
+<li>Send along with a number that identified where to start the byte-stream.</li>
+</ul>
+</li>
+<li>SYN+ACK (acknowledge)<ul>
+<li>Acknowledge of agreeing to communicate with it. And also send a SYN back for reverse direction connection.</li>
+</ul>
+</li>
+<li>ACK<ul>
+<li>Acknowledge of agreeing to the reverse direction connection.</li>
+</ul>
+</li>
+</ol>
+<h4><span id="syn">SYN</span><a href="#syn" class="header-anchor">#</a></h4><ul>
+<li>synchorize the data</li>
+</ul>
+<h4><span id="ack">ACK</span><a href="#ack" class="header-anchor">#</a></h4><ul>
+<li>ACK=n means the packages before n is received and ready to receive n</li>
+</ul>
+<h4><span id="retransmission">retransmission</span><a href="#retransmission" class="header-anchor">#</a></h4><ol>
+<li>timeout</li>
+<li>duplicates ACKs(3 duplicates) will trigger retransmission</li>
+</ol>
+<h3><span id="transmit-in-segments">transmit in segments</span><a href="#transmit-in-segments" class="header-anchor">#</a></h3><h3><span id="teardown-the-connection">teardown the connection</span><a href="#teardown-the-connection" class="header-anchor">#</a></h3><h4><span id="fin-finish">FIN (finish)</span><a href="#fin-finish" class="header-anchor">#</a></h4><ul>
+<li>No longer have data to send.</li>
+</ul>
+<h4><span id="data-ack">(Data)+ACK</span><a href="#data-ack" class="header-anchor">#</a></h4><ul>
+<li>Send the data before closing. And acknowledge that you are going to close the connection.</li>
+</ul>
+<h4><span id="fin">FIN</span><a href="#fin" class="header-anchor">#</a></h4><ul>
+<li>When finish the rest of data that need to transmit, send a FIN to tell that I have done sending data. You can close now.</li>
+</ul>
+<h4><span id="ack">ACK</span><a href="#ack" class="header-anchor">#</a></h4><ul>
+<li>The connection is now closed.</li>
+</ul>
+<p>ACK, checksum, sequence-number</p>
+<h3><span id="summary">summary</span><a href="#summary" class="header-anchor">#</a></h3><ol>
+<li>e2e reliable data transfer </li>
+<li>syntax</li>
+<li>time order</li>
+<li>communitive ack</li>
+<li>flow control</li>
+<li>congestion control</li>
+<li>3 hand shake &amp; 4 hand wave</li>
+</ol>
+<p>Unit 3 home work:<br>R 1,7,8,11,14,15,18<br>P 3,7,8,<strong>18</strong>,<strong>26</strong>,31,<strong>40</strong>,44</p>
+<h1><span id="congestion-control">congestion control</span><a href="#congestion-control" class="header-anchor">#</a></h1><h2><span id="timeout">timeout</span><a href="#timeout" class="header-anchor">#</a></h2><p>cwnd set to 1 MSS</p>
+<h2><span id="3-duplicate-acks">3 duplicate ACKs</span><a href="#3-duplicate-acks" class="header-anchor">#</a></h2><p>cut in half</p>
+<h2><span id="tcp-tahoe-always-sets-cwnd-to-1-timeout-or-3-duplicate-acks">TCP Tahoe always sets cwnd to 1 (timeout or 3 duplicate acks)</span><a href="#tcp-tahoe-always-sets-cwnd-to-1-timeout-or-3-duplicate-acks" class="header-anchor">#</a></h2>
+
+<p>3.51</p>
+<h1><span id="ip">IP</span><a href="#ip" class="header-anchor">#</a></h1><h2><span id="sdn-software-designed-network">SDN(software designed network)</span><a href="#sdn-software-designed-network" class="header-anchor">#</a></h2><p>A central cluster automatically calculate the best ip table for each router and continuously renew them.</p>
+<h2><span id="atm-mian-xiang-lian-jie-de-san-ceng-jiao-huan-ji">ATM(&#x9762;&#x5411;&#x8FDE;&#x63A5;&#x7684;&#x4E09;&#x5C42;&#x4EA4;&#x6362;&#x673A;)</span><a href="#atm-mian-xiang-lian-jie-de-san-ceng-jiao-huan-ji" class="header-anchor">#</a></h2><h2><span id="router-filter">router filter</span><a href="#router-filter" class="header-anchor">#</a></h2><ol>
+<li>high-speed switching fabric(&#x786C;&#x4EF6;&#x4EA4;&#x6362;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5904;&#x7406;&#x6570;&#x636E;&#xFF0C;&#x7C7B;&#x4F3C;PLC)<br>&#x4E8C;&#x8FDB;&#x5236;&#x4F4D;&#x6BD4;&#x8F83;&#xFF0C;&#x5148;&#x53BB;&#x6389;&#x63A9;&#x7801;&#x957F;&#x5EA6;&#x7684;&#x5934;&#x90E8;&#xFF0C;&#x904D;&#x5386;&#x9009;&#x62E9;&#x6700;&#x4F18;&#x8DEF;&#x7EBF;&#xFF08;&#x5339;&#x914D;&#x4F4D;&#x6570;&#x6700;&#x957F;&#x7684;&#x51FA;&#x53E3;&#xFF09;</li>
+</ol>
+<h2><span id="mac">MAC</span><a href="#mac" class="header-anchor">#</a></h2><h3><span id="multiple-access-links-protocols">multiple access links protocols</span><a href="#multiple-access-links-protocols" class="header-anchor">#</a></h3><p>p2p ppp</p>
+<p>collision(&#x78B0;&#x649E;) simultaneous transmission by nodes on single shared broadcast channel</p>
+<p>Master Slave, &#x8F6E;&#x8BE2;</p>
+<p>pass token one by one, who got the token can use the channel</p>
+<p>Random compete the channel</p>
+<p>switch store and forwarding </p>
+<h3><span id="mac-address-and-arp">MAC address and ARP</span><a href="#mac-address-and-arp" class="header-anchor">#</a></h3><p>MAC address is 64bit  </p>
+<p>ARP is a protocol, know ip, want to know MAC<br>RARP = reverse ARP<br>ARP table is MAC to IP    </p>
+<p>&#x6CE2;&#x7279;&#x7387;&#xFF08;&#x6BCF;&#x79D2;&#x53EF;&#x4EE5;&#x4F20;&#x8F93;&#x591A;&#x5C11;&#x7801;&#x5143;&#xFF09;/&#x5E26;&#x5BBD;</p>
+<h3><span id="ethernet">ethernet</span><a href="#ethernet" class="header-anchor">#</a></h3><p>preamble 7 bytes of 10101010 followed by one 10101011  </p>
+<h1><span id="others">others</span><a href="#others" class="header-anchor">#</a></h1><ul>
+<li>CRC &#x6821;&#x9A8C;(used in MAC layer)</li>
+<li>multiple access protocols</li>
+</ul>
+<h1><span id="security">security</span><a href="#security" class="header-anchor">#</a></h1><h2><span id="cryptography-and-its-many-uses-beyond-confidentiality">cryptography and its many uses beyond &#x201C;confidentiality&#x201D;</span><a href="#cryptography-and-its-many-uses-beyond-confidentiality" class="header-anchor">#</a></h2><p>f4 &#x5E76;&#x884C;&#x7B97;&#x6CD5;</p>
+<h2><span id="authentication">authentication</span><a href="#authentication" class="header-anchor">#</a></h2><h2><span id="message-integrity">message integrity</span><a href="#message-integrity" class="header-anchor">#</a></h2><h2><span id="availability">availability</span><a href="#availability" class="header-anchor">#</a></h2><h2><span id="firewalls-and-intrusion-detection-systems">firewalls and intrusion detection systems</span><a href="#firewalls-and-intrusion-detection-systems" class="header-anchor">#</a></h2><p>firewall: filter application layer, transportation layer, network layer, link layer<br>IDS: analyze data</p>
+<h2><span id="security-in-application-transport-network-link-layers">security in application, transport, network, link layers</span><a href="#security-in-application-transport-network-link-layers" class="header-anchor">#</a></h2><h1><span id="review">review</span><a href="#review" class="header-anchor">#</a></h1><ul>
+<li><input checked disabled type="checkbox"> &#x8003;&#x524D;&#x516D;&#x7AE0;</li>
+<li><input checked disabled type="checkbox"> &#x6BCF;&#x4E2A;&#x534F;&#x8BAE;&#x7684;&#x5185;&#x5BB9;&#xFF1A;&#x8BED;&#x4E49; &#x8BED;&#x6CD5; &#x65F6;&#x5E8F;<h2><span id="du-shi-da-ti">&#x90FD;&#x662F;&#x5927;&#x9898;</span><a href="#du-shi-da-ti" class="header-anchor">#</a></h2></li>
+<li><input checked disabled type="checkbox"> &#x95EE;&#x7B54;&#x9898;</li>
+<li><input checked disabled type="checkbox"> &#x7EFC;&#x5408;&#x9898;</li>
+<li><input checked disabled type="checkbox"> &#x7B97;&#x6CD5;&#x9898;&#xFF08;dv&#xFF0C; link-stat&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#xFF09;</li>
+<li><input checked disabled type="checkbox"> &#x5B9E;&#x9A8C;&#x9898;&#xFF08;&#x8DEF;&#x7531;&#x8868;&#xFF0C;&#x5206;&#x914D;&#x7AEF;&#x53E3;&#xFF0C;ip&#xFF0C;&#x542F;&#x52A8;&#x7AEF;&#x53E3;&#xFF09;</li>
+<li><input checked disabled type="checkbox"> &#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#xFF08;5&#x5C42;&#xFF09;</li>
+<li><input checked disabled type="checkbox"> 6.7 web</li>
+<li><input checked disabled type="checkbox"> encapsulate</li>
+<li><input checked disabled type="checkbox"> &#x5B50;&#x7F51;&#x5212;&#x5206; &#x56E0;&#x7279;&#x7F51;&#x67B6;&#x6784; &#xFF08;&#x5B50;&#x7F51;&#x63A9;&#x7801;&#xFF0C;&#x7F51;&#x6BB5;&#x5212;&#x5206;</li>
+<li><input checked disabled type="checkbox"> &#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x3001;&#x7B97;&#x6CD5;</li>
+<li><input checked disabled type="checkbox"> &#x8DDD;&#x79BB;&#x5411;&#x91CF;&#x7B97;&#x6CD5;&#xFF08;chapter 5 p256&#xFF09;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">&#x533A;&#x522B;</th>
+<th align="center">&#x8DEF;&#x7531;&#x5668;</th>
+<th align="center">&#x4EA4;&#x6362;&#x673A;</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x5DE5;&#x4F5C;&#x5C42;&#x7EA7;</td>
+<td align="center">&#x7F51;&#x7EDC;&#x5C42;</td>
+<td align="center">&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;</td>
+</tr>
+<tr>
+<td align="center">&#x5904;&#x7406;&#x7684;&#x534F;&#x8BAE;&#x6570;&#x636E;&#x5355;&#x5143;&#xFF08;pdu&#xFF09;</td>
+<td align="center">package</td>
+<td align="center">data frame</td>
+</tr>
+<tr>
+<td align="center">&#x5C40;&#x57DF;&#x7F51;&#x4EA4;&#x6362;</td>
+<td align="center">&#x6309;&#x7167;ip&#x8F6C;&#x53D1;</td>
+<td align="center">&#x6309;&#x7167;mac&#x5730;&#x5740;&#x8F6C;&#x53D1;</td>
+</tr>
+</tbody></table>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-02-20T12:54:02.000Z" title="2/20/2022, 8:54:02 PM">2022-02-20</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-02-20T13:09:10.639Z" title="2/20/2022, 9:09:10 PM">2022-02-20</time></span><span class="level-item"><a class="link-muted" href="/categories/study/">study</a></span><span class="level-item">7 minutes read (About 988 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/20/blockchain-intro-md/">blockchain intro.md</a></h1><div class="content"><h1><span id="ji-chu-li-jie">&#x57FA;&#x7840;&#x7406;&#x89E3;</span><a href="#ji-chu-li-jie" class="header-anchor">#</a></h1><table>
+<thead>
+<tr>
+<th align="center">&#x672F;&#x8BED;</th>
+<th align="center">&#x7406;&#x89E3;</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x533A;&#x5757;</td>
+<td align="center">&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x7684;&#x8D26;&#x76EE;</td>
+</tr>
+<tr>
+<td align="center">&#x94FE;</td>
+<td align="center">&#x6BCF;&#x4E2A;&#x533A;&#x5757;&#x4E4B;&#x95F4;&#x8054;&#x7CFB;&#x8D77;&#x6765;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td align="center">PoW&#x5171;&#x8BC6;</td>
+<td align="center">&#xFF08;&#x6316;&#x77FF;&#xFF09;&lt;br &gt; &#x68C0;&#x67E5;&#x8BB0;&#x8D26;&#x662F;&#x5426;&#x6B63;&#x786E;</td>
+</tr>
+<tr>
+<td align="center">&#x7F51;&#x7EDC;&#x8282;&#x70B9;</td>
+<td align="center">&#x77FF;&#x5DE5;&#xFF0C;&#x8BB0;&#x8D26;&#x5148;&#x751F;&#x662F;&#x5171;&#x8BC6;&#x673A;&#x5236;&#x9009;&#x51FA;&#x7684;&#x7279;&#x5B9A;&#x7684;&#x7F51;&#x7EDC;&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td align="center">P2P&#x7F51;&#x7EDC;</td>
+<td align="center">&#x4E92;&#x76F8;&#x901A;&#x4FE1;&#x4EE5;&#x4FDD;&#x969C;&#x533A;&#x5757;&#x7684;&#x4E0D;&#x53EF;&#x7BE1;&#x6539;</td>
+</tr>
+<tr>
+<td align="center">&#x5171;&#x8BC6;&#x673A;&#x5236;</td>
+<td align="center">&#x9009;&#x4E3E;&#x8BB0;&#x8D26;&#x5148;&#x751F;&#xFF0C;&#x7ED9;&#x4E88;&#x8BB0;&#x8D26;&#x5148;&#x751F;&#x624B;&#x7EED;&#x8D39;&#x4E0E;&#x62A5;&#x916C;</td>
+</tr>
+<tr>
+<td align="center">&#x5206;&#x5E03;&#x5F0F;&#x8D26;&#x672C;</td>
+<td align="center">&#x6CA1;&#x6709;&#x54EA;&#x4E2A;&#x662F;&#x6743;&#x5A01;&#xFF0C;&#x5171;&#x540C;&#x7EF4;&#x62A4;&#x6570;&#x636E;&#x53EF;&#x9760;&#x6027;</td>
+</tr>
+</tbody></table>
+<h1><span id="yao-gan-shu-ju-cun-chu">&#x9065;&#x611F;&#x6570;&#x636E;&#x5B58;&#x50A8;</span><a href="#yao-gan-shu-ju-cun-chu" class="header-anchor">#</a></h1><h1><span id="ipfs">IPFS</span><a href="#ipfs" class="header-anchor">#</a></h1><h2><span id="ipfs">IPFS</span><a href="#ipfs" class="header-anchor">#</a></h2><p>Inter-planetary file system</p>
+<p>&#x5206;&#x5E03;&#x5F0F;&#x70B9;&#x5BF9;&#x70B9;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;git&#x7684;&#x7248;&#x672C;&#x63A7;&#x5236;&#xFF0C;&#x7F51;&#x7EDC;&#x4F1A;&#x5220;&#x9664;&#x91CD;&#x590D;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5BF9;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7248;&#x672C;&#x5386;&#x53F2;&#x8FFD;&#x8E2A;&#xFF0C;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x4F1A;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x7528;&#x4E8E;&#x667A;&#x80FD;&#x5408;&#x7EA6;</p>
+
+
+<h3><span id="hao-chu">&#x597D;&#x5904;</span><a href="#hao-chu" class="header-anchor">#</a></h3><ol>
+<li>&#x6613;&#x4E8E;&#x5206;&#x5E03;&#xFF1A;&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x534F;&#x8BAE;&#xFF0C;&#x6240;&#x4EE5;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x6765;&#x8BF4;&#x90FD;&#x662F;&#x6613;&#x4E8E;&#x8BBF;&#x95EE;&#x7684;</li>
+<li>==&#x4EC5;&#x9700;&#x50A8;&#x5B58;&#x5355;&#x5B9E;&#x4F8B;&#x5373;&#x53EF;&#x4FDD;&#x969C;&#x5B89;&#x5168;&#x6027;==&#xFF08;&#x4F30;&#x8BA1;&#x662F;&#x7C7B;&#x4F3C;&#x4E0E;raid&#x90A3;&#x79CD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6821;&#x9A8C;&#x503C;&#x8FD8;&#x539F;&#x6570;&#x636E;&#xFF09;</li>
+<li>&#x4F4E;&#x5E26;&#x5BBD;&#x9700;&#x6C42;&#xFF1A;&#x70B9;&#x5BF9;&#x70B9;&#x4F20;&#x8F93;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;IPFS&#x5BFB;&#x5740;&#x5171;&#x4EAB;&#x6570;&#x636E;&#xFF0C;&#x7F29;&#x77ED;&#x5E26;&#x5BBD;&#x9700;&#x6C42;&#xFF08;&#x4E0D;&#x9700;&#x8981;&#x4E2D;&#x8F6C;&#x670D;&#x52A1;&#x5668;&#xFF09;&#xFF0C;&#x52A0;&#x5FEB;&#x6570;&#x636E;&#x5171;&#x4EAB;&#x901F;&#x5EA6;</li>
+<li>&#x5F52;&#x6863;&#xFF1A;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF0C;&#x5B89;&#x5168;&#x6027;&#x4FDD;&#x969C;</li>
+</ol>
+<h1><span id="an-quan">&#x5B89;&#x5168;</span><a href="#an-quan" class="header-anchor">#</a></h1><p>&#x76EE;&#x524D;&#x5E38;&#x91C7;&#x7528;&#x57FA;&#x4E8E;&#x53EF;&#x4FE1;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x4FE1;&#x4EFB;&#x673A;&#x5236; &#xFF08;&#x4E2D;&#x5FC3;&#x5316;&#xFF09;</p>
+<p>&#x5206;&#x5E03;&#x5F0F;&#x8282;&#x70B9;&#x95F4;&#x7684;&#x4FE1;&#x4EFB;&#x5173;&#x7CFB;</p>
+<p>&#x670D;&#x52A1;&#x5546;&#x53EF;&#x4EE5;&#x5B58;&#x5728;&#x8D8A;&#x6743;&#x884C;&#x4E3A;&#xFF0C;&#x6EE5;&#x7528;&#x7528;&#x6237;&#x5728;&#x4E91;&#x7AEF;&#x7684;&#x6570;&#x636E;</p>
+<h2><span id="ji-yu-qu-kuai-lian-de-pki">&#x57FA;&#x4E8E;&#x533A;&#x5757;&#x94FE;&#x7684;PKI</span><a href="#ji-yu-qu-kuai-lian-de-pki" class="header-anchor">#</a></h2><h3><span id="yuan-you-ca-cai-yong-ji-zhong-shi-pki-gong-yao-guan-li-ji-chu-she-shi">&#x539F;&#x6709;CA&#x91C7;&#x7528;&#x96C6;&#x4E2D;&#x5F0F;PKI&#xFF08;&#x516C;&#x94A5;&#x7BA1;&#x7406;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#xFF09;</span><a href="#yuan-you-ca-cai-yong-ji-zhong-shi-pki-gong-yao-guan-li-ji-chu-she-shi" class="header-anchor">#</a></h3><ul>
+<li>&#x5BB9;&#x6613;&#x88AB;&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;<br>&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x516C;&#x94A5;&#x53D1;&#x5E03;&#x8FC7;&#x7A0B;&#x65E0;&#x6CD5;&#x786E;&#x5B9A;&#x662F;&#x5426;&#x662F;&#x6B63;&#x786E;&#x7684;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x53D1;&#x9001;&#x7684;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x4E2D;&#x95F4;&#x4EBA;&#x53D1;&#x9001;&#x7684;  </li>
+<li>&#x5355;&#x70B9;&#x6545;&#x969C;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x5927;&#x89C4;&#x6A21;&#x8BC1;&#x4E66;&#x7684;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;</li>
+</ul>
+<h3><span id="ji-yu-gong-gong-zong-zhang-jian-li-pki-neng-gou-jian-li-fen-bu-shi-pki">&#x57FA;&#x4E8E;&#x516C;&#x5171;&#x603B;&#x5E10;&#x5EFA;&#x7ACB;PKI&#x80FD;&#x591F;&#x5EFA;&#x7ACB;&#x5206;&#x5E03;&#x5F0F;PKI</span><a href="#ji-yu-gong-gong-zong-zhang-jian-li-pki-neng-gou-jian-li-fen-bu-shi-pki" class="header-anchor">#</a></h3><ul>
+<li>&#x591A;&#x70B9;&#x8BA4;&#x8BC1;&#x63D0;&#x9AD8;&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;&#x96BE;&#x5EA6;  </li>
+<li>&#x63D0;&#x9AD8;&#x6570;&#x636E;&#x5B58;&#x653E;&#x4EFD;&#x6570;&#xFF0C;&#x907F;&#x514D;&#x5355;&#x70B9;&#x6545;&#x969C;&#x95EE;&#x9898;  </li>
+<li>&#x8BC1;&#x4E66;&#x7B7E;&#x53D1;&#x900F;&#x660E;<h4><span id="shi-li-certcoin">&#x5B9E;&#x4F8B;Certcoin</span><a href="#shi-li-certcoin" class="header-anchor">#</a></h4></li>
+<li>&#x6BCF;&#x4E2A;&#x533A;&#x5757;&#x7684;merkle root&#x6DB5;&#x76D6;&#x4E09;&#x4E2A;&#x5185;&#x5BB9;&#xFF08;identity, public key, action: registration/update/revocation&#xFF09;  <h4><span id="pb-pki">PB-PKI</span><a href="#pb-pki" class="header-anchor">#</a></h4></li>
+<li>&#x57FA;&#x4E8E;&#x533A;&#x5757;&#x94FE;&#x7684;PKI&#x7684;&#x6539;&#x8FDB;</li>
+<li>key-update&#x65B9;&#x6CD5;&#x4E0E;Certcoin&#x4E0D;&#x4E00;&#x6837;&#xFF0C;PB-PKI&#x4E0D;&#x628A;&#x4E4B;&#x524D;&#x7684;&#x516C;&#x94A5;&#x548C;id&#x4E0A;&#x94FE;</li>
+</ul>
+<h1><span id="zong-jie-gong-shi-suan-fa-you-xian-zhi-neng-he-yue">&#x603B;&#x7ED3;&#x5171;&#x8BC6;&#x7B97;&#x6CD5;&#xFF08;&#x4F18;&#x5148;&#xFF09;&#xFF0C;&#x667A;&#x80FD;&#x5408;&#x7EA6;</span><a href="#zong-jie-gong-shi-suan-fa-you-xian-zhi-neng-he-yue" class="header-anchor">#</a></h1><p>&#x53EF;&#x4EE5;&#x4ECE;&#x533B;&#x5B66;&#x6570;&#x636E;&#x3001;&#x519C;&#x4EA7;&#x54C1;&#x4E86;&#x89E3;</p>
+<h2><span id="zheng-ming-lei">&#x8BC1;&#x660E;&#x7C7B;</span><a href="#zheng-ming-lei" class="header-anchor">#</a></h2><h2><span id="gong-zuo-liang-zheng-ming-pow">&#x5DE5;&#x4F5C;&#x91CF;&#x8BC1;&#x660E;&#xFF08;PoW&#xFF09;</span><a href="#gong-zuo-liang-zheng-ming-pow" class="header-anchor">#</a></h2><h2><span id="quan-yi-zheng-ming-proof-of-stake-pos">&#x6743;&#x76CA;&#x8BC1;&#x660E;&#xFF08;Proof of Stake&#xFF0C;PoS&#xFF09;</span><a href="#quan-yi-zheng-ming-proof-of-stake-pos" class="header-anchor">#</a></h2><h2><span id="shou-quan-gu-quan-zheng-ming-dpos">&#x6388;&#x6743;&#x80A1;&#x6743;&#x8BC1;&#x660E;&#xFF08;DPoS&#xFF09;</span><a href="#shou-quan-gu-quan-zheng-ming-dpos" class="header-anchor">#</a></h2><h2><span id="quan-wei-zheng-ming-proof-of-authority-poa">&#x6743;&#x5A01;&#x8BC1;&#x660E;(Proof of Authority&#xFF0C;PoA)</span><a href="#quan-wei-zheng-ming-proof-of-authority-poa" class="header-anchor">#</a></h2><h2><span id="gong-xian-zheng-ming-proof-of-contribution-poc">&#x8D21;&#x732E;&#x8BC1;&#x660E;&#xFF08;Proof of Contribution&#xFF0C;PoC&#xFF09;</span><a href="#gong-xian-zheng-ming-proof-of-contribution-poc" class="header-anchor">#</a></h2><h2><span id="bai-zhan-ting-lei">&#x62DC;&#x5360;&#x5EAD;&#x7C7B;</span><a href="#bai-zhan-ting-lei" class="header-anchor">#</a></h2><h2><span id="bai-zhan-ting-suan-fa-raft-bu-zhi-chi-rong-cuo-zuo-e-jie-dian-rong-cuo-1-2">&#x62DC;&#x5360;&#x5EAD;&#x7B97;&#x6CD5; raft &#x4E0D;&#x652F;&#x6301;&#x5BB9;&#x9519;&#x4F5C;&#x6076;&#x8282;&#x70B9;&#xFF0C;&#x5BB9;&#x9519;1/2</span><a href="#bai-zhan-ting-suan-fa-raft-bu-zhi-chi-rong-cuo-zuo-e-jie-dian-rong-cuo-1-2" class="header-anchor">#</a></h2><h2><span id="shi-yong-bai-zhan-ting-suan-fa-pbft-zhi-chi-rong-cuo-zuo-e-jie-dian-rong-cuo-xiao-yu-1-3">&#x5B9E;&#x7528;&#x62DC;&#x5360;&#x5EAD;&#x7B97;&#x6CD5; pbft &#x652F;&#x6301;&#x5BB9;&#x9519;&#x4F5C;&#x6076;&#x8282;&#x70B9;&#xFF0C;&#x5BB9;&#x9519;&#x5C0F;&#x4E8E;1/3</span><a href="#shi-yong-bai-zhan-ting-suan-fa-pbft-zhi-chi-rong-cuo-zuo-e-jie-dian-rong-cuo-xiao-yu-1-3" class="header-anchor">#</a></h2><h2><span id="algorand">Algorand</span><a href="#algorand" class="header-anchor">#</a></h2><h2><span id="tendermint">Tendermint</span><a href="#tendermint" class="header-anchor">#</a></h2><p>&#x71C3;&#x70E7;&#x8BC1;&#x660E;&#x3001;&#x5B58;&#x5728;&#x8BC1;&#x660E;(Proof of Existence&#xFF0C;PoE)[29]&#x3001;&#x6570;&#x636E;&#x53EF;&#x6062;&#x590D;&#x8BC1;&#x660E;&#xFF08;Proof of Retrievability&#xFF0C;PoR&#xFF09;[30]&#x3001;&#x5B58;&#x50A8;&#x8BC1;&#x660E;&#xFF08;Proof  of  Storage&#xFF09;[31]</p>
+<h2><span id="dag-lei">DAG&#x7C7B;</span><a href="#dag-lei" class="header-anchor">#</a></h2><h2><span id="iota">IOTA</span><a href="#iota" class="header-anchor">#</a></h2><h2><span id="byteball">Byteball</span><a href="#byteball" class="header-anchor">#</a></h2><h1><span id="jie-he-yun-ji-suan">&#x7ED3;&#x5408;&#x4E91;&#x8BA1;&#x7B97;</span><a href="#jie-he-yun-ji-suan" class="header-anchor">#</a></h1><h1><span id="ha-xi-zhi-zhui-su">&#x54C8;&#x5E0C;&#x503C;&#xFF0C;&#x8FFD;&#x6EAF;</span><a href="#ha-xi-zhi-zhui-su" class="header-anchor">#</a></h1><h1><span id="shu-ju-cun-chu-he-fen-xiang">&#x6570;&#x636E;&#x5B58;&#x50A8;&#x548C;&#x5206;&#x4EAB;</span><a href="#shu-ju-cun-chu-he-fen-xiang" class="header-anchor">#</a></h1><h2><span id="yi-liao-ling-yu-ying-yong">&#x533B;&#x7597;&#x9886;&#x57DF;&#x5E94;&#x7528;</span><a href="#yi-liao-ling-yu-ying-yong" class="header-anchor">#</a></h2><p>&#x4F7F;&#x7528;&#x533A;&#x5757;&#x94FE;&#x5B89;&#x5168;&#x5730;&#x5206;&#x4EAB;CT&#x56FE;&#x50CF;&#x4F9B;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x8BAD;&#x7EC3;&#x4F7F;&#x7528;</p>
+<h3><span id="an-quan-xing">&#x5B89;&#x5168;&#x6027;</span><a href="#an-quan-xing" class="header-anchor">#</a></h3><p>&#x672C;&#x5730;&#x8FDB;&#x884C;&#x6A21;&#x578B;&#x8BAD;&#x7EC3;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6743;&#x91CD;&#x901A;&#x8FC7;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x5206;&#x4EAB;</p>
+<h3><span id="zhun-que-xing">&#x51C6;&#x786E;&#x6027;</span><a href="#zhun-que-xing" class="header-anchor">#</a></h3><p>&#x4F7F;&#x7528;==BAT&#x7B97;&#x6CD5;==&#x548C;==&#x6570;&#x636E;&#x6269;&#x589E;==&#x51CF;&#x5C11;&#x566A;&#x70B9;&#x548C;==&#x8FC7;&#x62DF;&#x5408;==&#x7684;&#x51FA;&#x73B0;</p>
+<h3><span id="yun-zuo-yuan-li">&#x8FD0;&#x4F5C;&#x539F;&#x7406;</span><a href="#yun-zuo-yuan-li" class="header-anchor">#</a></h3><p>&#x628A;&#x56FE;&#x50CF;&#x8FDB;&#x884C;&#x672C;&#x5730;&#x6A21;&#x578B;&#x8BAD;&#x7EC3;&#xFF0C;&#x628A;&#x6743;&#x91CD;&#x4FE1;&#x606F;&#x50A8;&#x5B58;&#x5728;IPFS&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x628A;IPFS&#x7684;hash&#x503C;&#x548C;&#x6743;&#x91CD;&#x503C;&#x5B58;&#x8FDB;&#x533A;&#x5757;&#x94FE;&#x8D26;&#x76EE;&#x4E2D;<br>&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x5904;&#x7406;&#x672C;&#x5730;&#x6A21;&#x578B;&#x6570;&#x636E;&#xFF0C;&#x5C06;&#x5904;&#x7406;&#x540E;&#x7684;&#x6743;&#x91CD;&#x5B58;&#x8FDB;IPFS&#xFF0C;hash&#x503C;&#x5B58;&#x8FDB;&#x533A;&#x5757;&#x94FE;&#x8D26;&#x76EE;</p>
+
+
+
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://link.springer.com/content/pdf/10.1007/s41870-020-00568-9.pdf">https://link.springer.com/content/pdf/10.1007/s41870-020-00568-9.pdf</a></p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://webvpn.swu.edu.cn/https/77726476706e69737468656265737421e7e056d234336155700b8ca891472636a6d29e640e/science/article/pii/S0895611120301075">http://webvpn.swu.edu.cn/https/77726476706e69737468656265737421e7e056d234336155700b8ca891472636a6d29e640e/science/article/pii/S0895611120301075</a></p>
+</blockquote>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/milk-bottle.svg" alt="VictorWinson"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">VictorWinson</p><p class="is-size-6 is-block">CS undergraduate student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">16</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://space.bilibili.com/115292872" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/VictorWinson"><i class="fab fa-github"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/tossing-around/"><span class="level-start"><span class="level-item">tossing around</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:23:35.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/sql-learning/">SQL learning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:21:03.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/unix-basic-commands/">UNIX basic commands</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:18:28.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/shell-basic/">shell basic</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:14:22.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/linux-ke-yi-fang-wen-ying-pan-de-qing-kuang-xia-xiu-gai-mi-ma/">linux可以访问硬盘的情况下修改密码</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:11:17.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/linux-bu-fen-ming-ling-xing-gong-ju-dui-bi/">UNIX cli tools comparing</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">February 2022</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CS/"><span class="tag">CS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NAS/"><span class="tag">NAS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UNIX/"><span class="tag">UNIX</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UNIX-linux/"><span class="tag">UNIX/linux</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blockchain/"><span class="tag">blockchain</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/optimizing/"><span class="tag">optimizing</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/raspberry-pi/"><span class="tag">raspberry pi</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/school-course/"><span class="tag">school course</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/self-taught/"><span class="tag">self-taught</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/shell/"><span class="tag">shell</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/system-security/"><span class="tag">system security</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tools/"><span class="tag">tools</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tossing-around/"><span class="tag">tossing around</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E6%96%87/"><span class="tag">中文</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/milk-bottle.svg" alt="Winson&#039;s tech &amp; live" height="28"></a><p class="is-size-7"><span>&copy; 2022 VictorWinson</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

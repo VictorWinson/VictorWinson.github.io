@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>SQL learning - Winson&#039;s tech &amp; live</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Winson&#039;s tech &amp; live"><meta name="msapplication-TileImage" content="/img/milk-bottle.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Winson&#039;s tech &amp; live"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Why (Structure Query Language)SQL? High level Highly compatible   key &amp;amp; superkey &amp;amp; foreign key Primary Key Unique Key Candidate Key Alternate Key Composite Key Super Key Foreign Key what"><meta property="og:type" content="blog"><meta property="og:title" content="SQL learning"><meta property="og:url" content="http://victorwinson.github.io/2022/02/20/sql-learning/"><meta property="og:site_name" content="Winson&#039;s tech &amp; live"><meta property="og:description" content="Why (Structure Query Language)SQL? High level Highly compatible   key &amp;amp; superkey &amp;amp; foreign key Primary Key Unique Key Candidate Key Alternate Key Composite Key Super Key Foreign Key what"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://victorwinson.github.io/img/og_image.png"><meta property="article:published_time" content="2022-02-20T15:23:35.000Z"><meta property="article:modified_time" content="2022-02-20T15:24:21.346Z"><meta property="article:author" content="VictorWinson"><meta property="article:tag" content="self-taught"><meta property="article:tag" content="database"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://victorwinson.github.io/2022/02/20/sql-learning/"},"headline":"SQL learning","image":["http://victorwinson.github.io/img/og_image.png"],"datePublished":"2022-02-20T15:23:35.000Z","dateModified":"2022-02-20T15:24:21.346Z","author":{"@type":"Person","name":"VictorWinson"},"publisher":{"@type":"Organization","name":"Winson's tech & live","logo":{"@type":"ImageObject","url":"http://victorwinson.github.io/img/milk-bottle.svg"}},"description":"Why (Structure Query Language)SQL? High level Highly compatible   key &amp; superkey &amp; foreign key Primary Key Unique Key Candidate Key Alternate Key Composite Key Super Key Foreign Key what"}</script><link rel="canonical" href="http://victorwinson.github.io/2022/02/20/sql-learning/"><link rel="icon" href="/img/milk-bottle.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/milk-bottle.svg" alt="Winson&#039;s tech &amp; live" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">about</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-02-20T15:23:35.000Z" title="2/20/2022, 11:23:35 PM">2022-02-20</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-02-20T15:24:21.346Z" title="2/20/2022, 11:24:21 PM">2022-02-20</time></span><span class="level-item">14 minutes read (About 2041 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">SQL learning</h1><div class="content"><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#why-structure-query-language-sql">Why (Structure Query Language)SQL?</a><ul>
+<li><a href="#high-level">High level</a></li>
+<li><a href="#highly-compatible">Highly compatible</a></li>
+</ul>
+</li>
+<li><a href="#key-superkey-foreign-key">key &amp; superkey &amp; foreign key</a><ul>
+<li><a href="#primary-key">Primary Key</a></li>
+<li><a href="#unique-key">Unique Key</a></li>
+<li><a href="#candidate-key">Candidate Key</a></li>
+<li><a href="#alternate-key">Alternate Key</a></li>
+<li><a href="#composite-key">Composite Key</a></li>
+<li><a href="#super-key">Super Key</a></li>
+<li><a href="#foreign-key">Foreign Key</a></li>
+<li><a href="#what-is-a-key">what is a key</a></li>
+<li><a href="#foreign-key">foreign key</a><ul>
+<li><a href="#constraint">constraint</a></li>
+</ul>
+</li>
+<li><a href="#integrity-constraint">integrity constraint</a></li>
+</ul>
+</li>
+<li><a href="#catgorize">catgorize</a><ul>
+<li><a href="#l">L</a></li>
+<li><a href="#r">R</a></li>
+<li><a href="#lr">LR</a></li>
+<li><a href="#n">N</a></li>
+</ul>
+</li>
+<li><a href="#ddl">DDL</a><ul>
+<li><a href="#table-schema">table schema</a></li>
+<li><a href="#table">table</a></li>
+<li><a href="#view-temporary-table">view &amp; temporary table</a></li>
+</ul>
+</li>
+<li><a href="#dml">DML</a><ul>
+<li><a href="#insert">insert</a></li>
+<li><a href="#delete">delete</a></li>
+<li><a href="#update">update</a></li>
+</ul>
+</li>
+<li><a href="#ql">QL</a></li>
+<li><a href="#commands">commands</a><ul>
+<li><a href="#select">SELECT</a></li>
+<li><a href="#where">WHERE</a></li>
+<li><a href="#as">AS</a></li>
+<li><a href="#in-any">IN = ANY</a></li>
+<li><a href="#like">LIKE</a></li>
+<li><a href="#between">BETWEEN</a></li>
+<li><a href="#order-by">ORDER BY</a><ul>
+<li><a href="#order-the-result-set-by-the-value-of-a-specific-column">Order the result set by the value of a specific column</a></li>
+<li><a href="#when-the-specific-column-has-same-value-a-secondary-column-will-be-helpful">When the specific column has same value, a secondary column will be helpful</a></li>
+</ul>
+</li>
+<li><a href="#insert">INSERT</a><ul>
+<li><a href="#add-a-complete-new-row-to-the-table">Add a complete new row to the table</a></li>
+<li><a href="#add-a-partial-row-in-to-the-table">Add a partial row in to the table</a></li>
+</ul>
+</li>
+<li><a href="#update">UPDATE</a></li>
+<li><a href="#delete">DELETE</a></li>
+</ul>
+</li>
+<li><a href="#advanced-sql">Advanced SQL</a><ul>
+<li><a href="#round">ROUND</a></li>
+<li><a href="#list-set-bag">list set bag</a></li>
+<li><a href="#commands-1">commands</a><ul>
+<li><a href="#distinct">DISTINCT</a></li>
+<li><a href="#group-by">GROUP BY</a></li>
+<li><a href="#having">HAVING</a></li>
+<li><a href="#substring">SUBSTRING()</a></li>
+<li><a href="#or-concat">|| or CONCAT</a></li>
+<li><a href="#daydiff-mysql-only">DAYDIFF() (MySQL only)</a></li>
+<li><a href="#into">INTO</a></li>
+<li><a href="#insert-into">INSERT INTO</a></li>
+<li><a href="#limit">LIMIT</a></li>
+<li><a href="#intersect">INTERSECT</a></li>
+<li><a href="#union">UNION</a></li>
+<li><a href="#all">ALL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#problems-when-using">problems when using</a><ul>
+<li><a href="#time-zone-not-correct">time zone not correct</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<p>&#x81EA;&#x5B66;&#x7F51;&#x7AD9; <a target="_blank" rel="noopener" href="https://sqlzoo.net/">https://sqlzoo.net/</a></p>
+<h1><span id="why-structure-query-language-sql">Why (Structure Query Language)SQL?</span><a href="#why-structure-query-language-sql" class="header-anchor">#</a></h1><h2><span id="high-level">High level</span><a href="#high-level" class="header-anchor">#</a></h2><p>As a high level language you only need to care what data you want from the DBS rather then how I&#x2019;m going to get it or what algorithm I&#x2019;m going to use.</p>
+<h2><span id="highly-compatible">Highly compatible</span><a href="#highly-compatible" class="header-anchor">#</a></h2><p>With only have to write what you need in SQL query and let DBS to decide how to get the results. Scientists can add new algorithm in to the DBS. And you don&#x2019;t have to make any change to your SQL queries.</p>
+<h1><span id="key-superkey-foreign-key">key &amp; superkey &amp; foreign key</span><a href="#key-superkey-foreign-key" class="header-anchor">#</a></h1><h2><span id="primary-key">Primary Key</span><a href="#primary-key" class="header-anchor">#</a></h2><p>Primary Key is a field that can be used to identify all the tuples uniquely in the database. Only one of the columns can be declared as a primary key. A Primary Key can not have a NULL value.</p>
+<p>Example: In the above given relational table, &#x201C;cust_id&#x201D; is the Primary Key as it can identify all the row uniquely from the table.</p>
+<h2><span id="unique-key">Unique Key</span><a href="#unique-key" class="header-anchor">#</a></h2><p>Unique Key can be a field or set of fields that can be used to uniquely identify the tuple from the database. One or more fields can be declared as a unique Key. The unique Key column can also hold the NULL value. Use of Unique Key improves the performance of data retrieval. It makes searching for records from the database much more faster &amp; efficient.</p>
+<p>Example: In the above given relational table, &#x201C;cust_aadhaar_number&#x201D;, &#x201C;cust_pan_number&#x201D; are the Unique Key as it can allow one value as a NULL in the column</p>
+<h2><span id="candidate-key">Candidate Key</span><a href="#candidate-key" class="header-anchor">#</a></h2><p>Candidate Key can be a column or group of columns that can qualify for the Unique Key. Every table has at least one Candidate Key. A table may have one or more Candidate Key. Each Candidate Key can work as a Primary Key if required in certain scenarios.</p>
+<p>Example: In the above given relational table, &#x201C;cust_id&#x201D;, &#x201C;cust_aadhaar_number&#x201D;, &#x201C;cust_pan_number&#x201D; are the Candidate Key as it can identify all the row uniquely from the table. These columns also qualify the criteria to be a Primary Key.</p>
+<h2><span id="alternate-key">Alternate Key</span><a href="#alternate-key" class="header-anchor">#</a></h2><p>Alternate Key is that Key which can be used as a Primary Key if required. Alternate Key also qualifies to be a Primary Key but for the time being, It is not the Primary Key.</p>
+<p>Example: In the above given relational table, &#x201C;cust_aadhaar_number&#x201D;, &#x201C;cust_pan_number&#x201D; are the Alternate Key as both of the columns can be a Primary Key but not yet selected for the Primary Key.</p>
+<h2><span id="composite-key">Composite Key</span><a href="#composite-key" class="header-anchor">#</a></h2><p>Composite Key is also known as Compound Key / Concatenated Key. Composite Key refers to a group of two or more columns that can be used to identify a tuple from the table uniquely. A group of the column in combination with each other can identify a row uniquely but a single column of that group doesn&#x2019;t promise to identify the row uniquely.</p>
+<p>Example: In the above given relational table i.e. Order Table, &#x201C;cust_id&#x201D;, &#x201C;order_month_year&#x201D; group of these columns used in combination to identify the tuple uniquely in the Order Table. The individual column of this table is not able to identify the tuple uniquely from the Order table.</p>
+<h2><span id="super-key">Super Key</span><a href="#super-key" class="header-anchor">#</a></h2><p>Super Key is a combination of columns, each column of the table remains dependent on it. Super Key may have some more columns in the group which may or may not be necessary to identify the tuple uniquely from the table. Candidate Key is the subset of the Super Key. Candidate Key is also known as minimal Super Key.</p>
+<p>Example: In the above given relational table, Primary Key, Candidate Key &amp; Unique Key is the Super Key. As a single column of Customer Table i.e &#x2018;cust_id&#x2019; is sufficient to identify the tuples uniquely from the table. Any set of the column which contains &#x2018;cust_aadhaar_number&#x2019;, &#x2018;cust_pan_number&#x2019; is a Super Key.</p>
+<h2><span id="foreign-key">Foreign Key</span><a href="#foreign-key" class="header-anchor">#</a></h2><p>A foreign key is a column which is known as Primary Key in the other table i.e. A Primary Key in a table can be referred to as a Foreign Key in another table. Foreign Key may have duplicate &amp; NULL values if it is defined to accept NULL values.</p>
+<p>Example: In the above given relational table, &#x2018;cust_id&#x2019; is Primary Key in the Customer table but &#x2018;cust_id&#x2019; in the Order table known as a &#x2018;Foreign Key&#x2019;. Foreign Key in a table always becomes the Primary Key on the other table.</p>
+<h2><span id="what-is-a-superkey">what is a superkey</span><a href="#what-is-a-superkey" class="header-anchor">#</a></h2><p>the key that can make sure $superkey1 \ne superkey2 \rightarrow tuple1 \ne tuple2$</p>
+<h2><span id="what-is-a-key">what is a key</span><a href="#what-is-a-key" class="header-anchor">#</a></h2><p>proper subset of superkey</p>
+<h2><span id="foreign-key">foreign key</span><a href="#foreign-key" class="header-anchor">#</a></h2><p>reference of other(or itself) table&#x2019;s key</p>
+<h3><span id="constraint">constraint</span><a href="#constraint" class="header-anchor">#</a></h3><p>can only add to table if the foreign key is exsit in it&#x2019;s reference table</p>
+<h2><span id="integrity-constraint">integrity constraint</span><a href="#integrity-constraint" class="header-anchor">#</a></h2><p>primary domain, and some rules that it have to obay</p>
+<h1><span id="catgorize">catgorize</span><a href="#catgorize" class="header-anchor">#</a></h1><h2><span id="l">L</span><a href="#l" class="header-anchor">#</a></h2><p>need to be include in primary key</p>
+<h2><span id="r">R</span><a href="#r" class="header-anchor">#</a></h2><p>never needed to be include in primary key</p>
+<h2><span id="lr">LR</span><a href="#lr" class="header-anchor">#</a></h2><p>sometimes need to be include in primary key</p>
+<h2><span id="n">N</span><a href="#n" class="header-anchor">#</a></h2><h1><span id="ddl">DDL</span><a href="#ddl" class="header-anchor">#</a></h1><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> Books
+<span class="token punctuation">(</span>BookNo <span class="token keyword">INTEGER</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">UNIQUE</span><span class="token punctuation">,</span>
+ SortNo <span class="token keyword">CHAR</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ Title <span class="token keyword">CHAR</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ Author <span class="token keyword">CHAR</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ Price <span class="token keyword">FLOAT</span><span class="token punctuation">,</span>
+ LoanNo <span class="token keyword">INTEGER</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">#fixed length</span>
+<span class="token keyword">CHAR</span><span class="token punctuation">;</span> <span class="token comment">#variable length</span>
+<span class="token keyword">INTEGER</span><span class="token punctuation">;</span>
+<span class="token keyword">SMALLINT</span><span class="token punctuation">;</span>
+<span class="token keyword">NUMERIC</span><span class="token punctuation">;</span> <span class="token comment">#precision &amp; scale</span>
+<span class="token keyword">DECIMAL</span><span class="token punctuation">;</span>
+<span class="token keyword">DATE</span><span class="token punctuation">(</span><span class="token keyword">year</span><span class="token punctuation">,</span> <span class="token keyword">month</span><span class="token punctuation">,</span> <span class="token keyword">day</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">TIME</span><span class="token punctuation">(</span><span class="token keyword">hour</span><span class="token punctuation">,</span> <span class="token keyword">minute</span><span class="token punctuation">,</span> <span class="token keyword">second</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">NOT</span> <span class="token boolean">NULL</span> can be <span class="token keyword">use</span> <span class="token keyword">to</span> <span class="token keyword">force</span> <span class="token keyword">data</span> input <span class="token keyword">when</span> adding a new tuple<span class="token punctuation">,</span> so <span class="token keyword">if</span> a <span class="token keyword">column</span> have <span class="token keyword">no</span> exist <span class="token operator">or</span> currently unknown <span class="token operator">is</span> <span class="token operator">not</span> convenient<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2><span id="table-schema">table schema</span><a href="#table-schema" class="header-anchor">#</a></h2><p>relation no null  or duplicate allowed</p>
+<h2><span id="table">table</span><a href="#table" class="header-anchor">#</a></h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> Books
+	<span class="token keyword">ADD</span> new_col data_type <span class="token keyword">constraint</span><span class="token punctuation">;</span>
+	<span class="token keyword">DROP</span><span class="token punctuation">;</span>
+	<span class="token keyword">ALTER</span> <span class="token keyword">COLUMN</span> col_name data_type<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> table_name <span class="token punctuation">[</span><span class="token keyword">RESTRICT</span><span class="token operator">|</span><span class="token keyword">CASCADE</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">UNIQUE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment"># except for null no duplicate</span>
+<span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment"># only one for each table, NOT NULL for every attribute from the list</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">FOREIGN</span>  <span class="token keyword">KEY</span><span class="token punctuation">(</span>attribute<span class="token operator">-</span>list<span class="token punctuation">)</span> <span class="token keyword">REFERENCES</span><span class="token punctuation">(</span><span class="token keyword">table</span> attribute<span class="token operator">-</span>list<span class="token punctuation">)</span>
+<span class="token keyword">ON</span> <span class="token keyword">DELETE</span> <span class="token keyword">SET</span> <span class="token boolean">NULL</span>
+<span class="token keyword">ON</span> <span class="token keyword">DELETE</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>if there is a null in a simple semantic, it will be ignore<br>and in pasha(strict) semantic </p>
+<p>so we can choose strict or simple in DBMS like mysql or postgre?</p>
+<h2><span id="view-temporary-table">view &amp; temporary table</span><a href="#view-temporary-table" class="header-anchor">#</a></h2><p>view are a pre-produce table, that comes from a existing table, which can save storage</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> ASSERTION name <span class="token keyword">CHECK</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">VIEW</span> <span class="token keyword">AS</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">GLOBAL</span> <span class="token keyword">TEMPORARY</span> <span class="token keyword">TABLE</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">LOCAL</span> <span class="token keyword">TEMPORARY</span> <span class="token keyword">TABLE</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1><span id="dml">DML</span><a href="#dml" class="header-anchor">#</a></h1><p>manipulating language</p>
+<h2><span id="insert">insert</span><a href="#insert" class="header-anchor">#</a></h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> name
+<span class="token keyword">VALUES</span> <span class="token keyword">value</span><span class="token operator">-</span>list
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span>
+<span class="token keyword">VALUES</span> 
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2><span id="delete">delete</span><a href="#delete" class="header-anchor">#</a></h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">DELETE</span> <span class="token keyword">FROM</span> name
+<span class="token keyword">WHERE</span> condition<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2><span id="update">update</span><a href="#update" class="header-anchor">#</a></h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">UPDATE</span> name <span class="token keyword">SET</span> <span class="token keyword">set</span><span class="token operator">-</span>name
+<span class="token keyword">WHERE</span> condition<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1><span id="ql">QL</span><a href="#ql" class="header-anchor">#</a></h1><p>query language</p>
+<h1><span id="commands">commands</span><a href="#commands" class="header-anchor">#</a></h1><h2><span id="select">SELECT</span><a href="#select" class="header-anchor">#</a></h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> col_name1<span class="token punctuation">(</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>col_name2<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> tbl_name<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>The table like this contains only requested columns is called <strong>result set</strong>.</p>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">name</th>
+<th align="center">type_1</th>
+<th align="center">type_2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">Bulbasaur</td>
+<td align="center">Grass</td>
+<td align="center">Poison</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Ivysaur</td>
+<td align="center">Grass</td>
+<td align="center">Poison</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Venusaur</td>
+<td align="center">Grass</td>
+<td align="center">Poison</td>
+</tr>
+</tbody></table>
+<p><strong>DON&#x2019;T use</strong> <code>SELECT *</code> in production data</p>
+<ol>
+<li>Unnecessary cost.</li>
+<li>Two table return same column name might lead to a crash.</li>
+</ol>
+<h2><span id="where">WHERE</span><a href="#where" class="header-anchor">#</a></h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> col_name1<span class="token punctuation">(</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>col_name2<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> tbl_name
+<span class="token keyword">WHERE</span> condition<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>The condition is used to evaluate every row in the table. When a row is evaluated true, it will be contain in the result set.</p>
+<ul>
+<li>Conditions</li>
+</ul>
+<ol>
+<li><code>=</code></li>
+<li><code>&gt;=</code></li>
+<li><code>&lt;=</code></li>
+<li><code>&gt;</code></li>
+<li><code>&lt;</code></li>
+<li><code>&lt;&gt;</code> not equal, sometimes <code>!=</code> works too</li>
+<li><code>AND</code> between two operators</li>
+<li><code>NOT</code> pre-fix</li>
+<li><code>OR</code></li>
+</ol>
+<h2><span id="as">AS</span><a href="#as" class="header-anchor">#</a></h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> col_name1<span class="token punctuation">(</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> name1 <span class="token punctuation">(</span>col_name2<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> tbl_name
+<span class="token keyword">WHERE</span> condition<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>AS can change the column name into alias in the result set.<br>If you want to use space in a alias you need to use &#x2018;&#x2019; to quota it. However, in MySQL &#x201C;&#x201D; is also compatible.</p>
+<h2><span id="in-any">IN = ANY</span><a href="#in-any" class="header-anchor">#</a></h2><p>Test if the value inside column matches any one item in a list of values.</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> col_name1
+<span class="token keyword">FROM</span> tbl_name
+<span class="token keyword">WHERE</span> col_name1 <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token string">&apos;A&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;B&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>There can be more than this in the brackets, it can be a result set generate by another query.</p>
+<h2><span id="like">LIKE</span><a href="#like" class="header-anchor">#</a></h2><p>Just like <code>=</code> but wildcart can be use</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> col_name1
+<span class="token keyword">FROM</span> tbl_name
+<span class="token keyword">WHERE</span> col_name1 <span class="token operator">LIKE</span> <span class="token string">&apos;%a&apos;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>Wildcards</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">SQL</th>
+<th align="center">Regex</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%</td>
+<td align="center">.*</td>
+</tr>
+<tr>
+<td align="center">_</td>
+<td align="center">.</td>
+</tr>
+</tbody></table>
+<h2><span id="between">BETWEEN</span><a href="#between" class="header-anchor">#</a></h2><p>Restrain the value in a range</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> col_name1<span class="token punctuation">,</span> col_name2
+<span class="token keyword">FROM</span> tbl_name
+<span class="token keyword">WHERE</span> col_name1 <span class="token operator">BETWEEN</span> <span class="token number">20</span> <span class="token operator">AND</span> <span class="token number">30</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>Does <code>BETWEEN A AND B</code> have to satisfied $A&lt;B$ ? yes</li>
+</ul>
+<h2><span id="order-by">ORDER BY</span><a href="#order-by" class="header-anchor">#</a></h2><h3><span id="order-the-result-set-by-the-value-of-a-specific-column">Order the result set by the value of a specific column</span><a href="#order-the-result-set-by-the-value-of-a-specific-column" class="header-anchor">#</a></h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> tbl_name
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> col_name <span class="token keyword">ASC</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>By default it will be sort in ascending order, if you prefer descending order, add DESC after the col_name</p>
+<h3><span id="when-the-specific-column-has-same-value-a-secondary-column-will-be-helpful">When the specific column has same value, a secondary column will be helpful</span><a href="#when-the-specific-column-has-same-value-a-secondary-column-will-be-helpful" class="header-anchor">#</a></h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> tbl_name
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> col_name1 <span class="token keyword">ASC</span><span class="token punctuation">,</span> col_name2 <span class="token keyword">DESC</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><em><strong>this secondary won&#x2019;t be any help unless there are rows that have same value in first column</strong></em></p>
+<h2><span id="insert">INSERT</span><a href="#insert" class="header-anchor">#</a></h2><h3><span id="add-a-complete-new-row-to-the-table">Add a complete new row to the table</span><a href="#add-a-complete-new-row-to-the-table" class="header-anchor">#</a></h3><ul>
+<li>for a table like this</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">name</th>
+<th align="center">country</th>
+<th align="center">language</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">John</td>
+<td align="center">US</td>
+<td align="center">English</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Sam</td>
+<td align="center">UK</td>
+<td align="center">English</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Tom</td>
+<td align="center">CAN</td>
+<td align="center">French</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> tbl_name
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">&apos;Chen&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Chinese&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>A query like this will produce a table like this will cause a error column doesn&#x2019;t match, cause there are 4 columns in table and only 3 values given in the query.</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> tbl_name
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">&apos;Chen&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;CN&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Chinese&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>A correct one like this turn the table into</p>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">name</th>
+<th align="center">country</th>
+<th align="center">language</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">John</td>
+<td align="center">US</td>
+<td align="center">English</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Sam</td>
+<td align="center">UK</td>
+<td align="center">English</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Tom</td>
+<td align="center">CAN</td>
+<td align="center">French</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Chen</td>
+<td align="center">CN</td>
+<td align="center">Chinese</td>
+</tr>
+</tbody></table>
+<h3><span id="add-a-partial-row-in-to-the-table">Add a partial row in to the table</span><a href="#add-a-partial-row-in-to-the-table" class="header-anchor">#</a></h3><p>For the last table, command like this</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> tbl<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token keyword">language</span><span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">&apos;Yoki&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Janpaness&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>this will produce a table as follow</p>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">name</th>
+<th align="center">country</th>
+<th align="center">language</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">John</td>
+<td align="center">US</td>
+<td align="center">English</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Sam</td>
+<td align="center">UK</td>
+<td align="center">English</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Tom</td>
+<td align="center">CAN</td>
+<td align="center">French</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Chen</td>
+<td align="center">CN</td>
+<td align="center">Chinese</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">Yoki</td>
+<td align="center"><strong>NULL</strong></td>
+<td align="center">Japaneses</td>
+</tr>
+</tbody></table>
+<p>Or the NULL could be the value you defined as DEFAULT at the beginning.</p>
+<h2><span id="update">UPDATE</span><a href="#update" class="header-anchor">#</a></h2><p>Modify existing rows</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">UPDATE</span> <span class="token keyword">table</span>
+<span class="token keyword">SET</span> col_name1 <span class="token operator">=</span> <span class="token string">&apos;rabbit&apos;</span>
+<span class="token keyword">WHERE</span> col_name2 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2><span id="delete">DELETE</span><a href="#delete" class="header-anchor">#</a></h2><p>Delete data from a table</p>
+<p>==Caution:==<code>DELETE FROM tbl_name;</code> will delete all the data in the table!</p>
+<h1><span id="advanced-sql">Advanced SQL</span><a href="#advanced-sql" class="header-anchor">#</a></h1><h2><span id="round">ROUND</span><a href="#round" class="header-anchor">#</a></h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token function">ROUND</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>b needs to be a integer but it can be under 0 which means to round into 10&#x2019;s</p>
+<h2><span id="list-set-bag">list set bag</span><a href="#list-set-bag" class="header-anchor">#</a></h2><table>
+<thead>
+<tr>
+<th align="center">Features\type</th>
+<th align="center">list</th>
+<th align="center">set</th>
+<th align="center">bag</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">duplicate</td>
+<td align="center">yes</td>
+<td align="center">yes</td>
+<td align="center">yes</td>
+</tr>
+<tr>
+<td align="center">ordering</td>
+<td align="center">fixed</td>
+<td align="center">unordered</td>
+<td align="center">no</td>
+</tr>
+</tbody></table>
+<h2><span id="commands">commands</span><a href="#commands" class="header-anchor">#</a></h2><h3><span id="distinct">DISTINCT</span><a href="#distinct" class="header-anchor">#</a></h3><p>Remove duplicates</p>
+<h3><span id="group-by">GROUP BY</span><a href="#group-by" class="header-anchor">#</a></h3><p>When there are columns you <code>SELECT</code> has different row numbers, it will get confused which to print. So this is when you use <code>GROUP BY</code><br><code>GROUP BY</code> is to group rows into different subset base on column(s), and do aggregates against each subset.</p>
+<h3><span id="having">HAVING</span><a href="#having" class="header-anchor">#</a></h3><p>==Caution:== Can&#x2019;t use an aggregation in a <code>WHERE</code> filtering clause, because they are not yet computed.<br>By using a <code>HAVING</code> clause instead can use an uncomputed aggregation for filtering.</p>
+<h3><span id="substring">SUBSTRING()</span><a href="#substring" class="header-anchor">#</a></h3><p><code>SUBSTRING(value, a, b)</code> will get the a-b part of the value, cut a part of the string. The count start at 0. So for example <code>SUBSTRING(&apos;suggestions&apos;, 0, 5)</code> is equal to <code>&apos;sugges&apos;</code>.</p>
+<h3><span id="or-concat">|| or CONCAT</span><a href="#or-concat" class="header-anchor">#</a></h3><p><code>str_1 || str_2</code> will concatnate str_1 and str_2</p>
+<p><code>CONCAT()</code> in MySQL works the same. Or in MySQL just put <code>&apos;str_1&apos; &apos;str_2&apos;</code> together, MySQL will concatenate it automatically</p>
+<h3><span id="daydiff-mysql-only">DAYDIFF() (MySQL only)</span><a href="#daydiff-mysql-only" class="header-anchor">#</a></h3><p>Caculate how many days are there from day A to day B.</p>
+<p>to do this in sqlite is to do</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> CAST<span class="token punctuation">(</span><span class="token punctuation">(</span>julianday<span class="token punctuation">(</span>day_A<span class="token punctuation">)</span> <span class="token operator">-</span> julianday<span class="token punctuation">(</span><span class="token keyword">day</span> B<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> <span class="token keyword">INT</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> days<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>The date format is &#x2018;yyyy-mm-dd&#x2019;</p>
+<h3><span id="into">INTO</span><a href="#into" class="header-anchor">#</a></h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> col_name <span class="token keyword">INTO</span> newtable
+<span class="token keyword">FROM</span> <span class="token keyword">table</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>Copy column(s) into a new table.</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> TABEL newtable<span class="token punctuation">(</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> col_name <span class="token keyword">FROM</span> <span class="token keyword">table</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>In MySQL this will do the same thing.</p>
+<h3><span id="insert-into">INSERT INTO</span><a href="#insert-into" class="header-anchor">#</a></h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> <span class="token keyword">table</span><span class="token punctuation">(</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> col_name <span class="token keyword">FROM</span> <span class="token keyword">table</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>Copy column(s) into exsiting table.<br>==caution:== the column number must match</p>
+<h3><span id="limit">LIMIT</span><a href="#limit" class="header-anchor">#</a></h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">LIMIT</span> <span class="token number">20</span> <span class="token keyword">OFFSET</span> <span class="token number">10</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Skip 10 and return 20 rows(11~30)</p>
+<h3><span id="intersect">INTERSECT</span><a href="#intersect" class="header-anchor">#</a></h3><p>the intersect of two select results <strong>And</strong></p>
+<h3><span id="union">UNION</span><a href="#union" class="header-anchor">#</a></h3><p>the union of two select results <strong>Or</strong></p>
+<h3><span id="all">ALL</span><a href="#all" class="header-anchor">#</a></h3><p>All the rows in the inner query must satisfy the expression</p>
+<h1><span id="problems-when-using">problems when using</span><a href="#problems-when-using" class="header-anchor">#</a></h1><h2><span id="time-zone-not-correct">time zone not correct</span><a href="#time-zone-not-correct" class="header-anchor">#</a></h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SHOW</span> VARIABLES <span class="token operator">LIKE</span> <span class="token string">&apos;%time_zone%&apos;</span><span class="token punctuation">;</span>
+<span class="token comment">#show current time zone setting by default is UTC SYSTEM</span>
+<span class="token keyword">set</span> <span class="token keyword">global</span> time_zone <span class="token operator">=</span> <span class="token string">&apos;+8:00&apos;</span><span class="token punctuation">;</span>
+<span class="token comment">#this will change the global time_zone varible, it will take effect in next session</span>
+<span class="token keyword">set</span> time_zone <span class="token operator">=</span> <span class="token string">&apos;+8:00&apos;</span><span class="token punctuation">;</span>
+<span class="token comment">#this only change the varible in this session</span>
+flush <span class="token keyword">privileges</span><span class="token punctuation">;</span>
+<span class="token comment">#save the changes</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</div><div class="article-licensing box"><div class="licensing-title"><p>SQL learning</p><p><a href="http://victorwinson.github.io/2022/02/20/sql-learning/">http://victorwinson.github.io/2022/02/20/sql-learning/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>VictorWinson</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-02-20</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-02-20</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/self-taught/">self-taught</a><a class="link-muted mr-2" rel="tag" href="/tags/database/">database</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/02/20/unix-basic-commands/"><span class="level-item">UNIX basic commands</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/milk-bottle.svg" alt="VictorWinson"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">VictorWinson</p><p class="is-size-6 is-block">CS undergraduate student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">16</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://space.bilibili.com/115292872" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/VictorWinson"><i class="fab fa-github"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/tossing-around/"><span class="level-start"><span class="level-item">tossing around</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:23:35.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/sql-learning/">SQL learning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:21:03.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/unix-basic-commands/">UNIX basic commands</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:18:28.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/shell-basic/">shell basic</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:14:22.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/linux-ke-yi-fang-wen-ying-pan-de-qing-kuang-xia-xiu-gai-mi-ma/">linux可以访问硬盘的情况下修改密码</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:11:17.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/linux-bu-fen-ming-ling-xing-gong-ju-dui-bi/">UNIX cli tools comparing</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">February 2022</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CS/"><span class="tag">CS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NAS/"><span class="tag">NAS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UNIX/"><span class="tag">UNIX</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UNIX-linux/"><span class="tag">UNIX/linux</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blockchain/"><span class="tag">blockchain</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/optimizing/"><span class="tag">optimizing</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/raspberry-pi/"><span class="tag">raspberry pi</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/school-course/"><span class="tag">school course</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/self-taught/"><span class="tag">self-taught</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/shell/"><span class="tag">shell</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/system-security/"><span class="tag">system security</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tools/"><span class="tag">tools</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tossing-around/"><span class="tag">tossing around</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E6%96%87/"><span class="tag">中文</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/milk-bottle.svg" alt="Winson&#039;s tech &amp; live" height="28"></a><p class="is-size-7"><span>&copy; 2022 VictorWinson</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
