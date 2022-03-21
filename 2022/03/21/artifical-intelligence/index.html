@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>artifical intelligence - Winson&#039;s tech &amp; live</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Winson&#039;s tech &amp; live"><meta name="msapplication-TileImage" content="/img/milk-bottle.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Winson&#039;s tech &amp; live"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="search terms that used Approach Revised Approach algorithm DFS BFS Greedy Best-First Search A* Search minimax algorithm     Knowledge terms that used           mark {background-color:yellow;}"><meta property="og:type" content="blog"><meta property="og:title" content="artifical intelligence"><meta property="og:url" content="http://victorwinson.github.io/2022/03/21/artifical-intelligence/"><meta property="og:site_name" content="Winson&#039;s tech &amp; live"><meta property="og:description" content="search terms that used Approach Revised Approach algorithm DFS BFS Greedy Best-First Search A* Search minimax algorithm     Knowledge terms that used           mark {background-color:yellow;}"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://victorwinson.github.io/img/og_image.png"><meta property="article:published_time" content="2022-03-21T15:01:48.000Z"><meta property="article:modified_time" content="2022-03-21T15:08:02.550Z"><meta property="article:author" content="VictorWinson"><meta property="article:tag" content="self-taught"><meta property="article:tag" content="CS"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://victorwinson.github.io/2022/03/21/artifical-intelligence/"},"headline":"artifical intelligence","image":["http://victorwinson.github.io/img/og_image.png"],"datePublished":"2022-03-21T15:01:48.000Z","dateModified":"2022-03-21T15:08:02.550Z","author":{"@type":"Person","name":"VictorWinson"},"publisher":{"@type":"Organization","name":"Winson's tech & live","logo":{"@type":"ImageObject","url":"http://victorwinson.github.io/img/milk-bottle.svg"}},"description":"search terms that used Approach Revised Approach algorithm DFS BFS Greedy Best-First Search A* Search minimax algorithm     Knowledge terms that used           mark {background-color:yellow;}"}</script><link rel="canonical" href="http://victorwinson.github.io/2022/03/21/artifical-intelligence/"><link rel="icon" href="/img/milk-bottle.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/milk-bottle.svg" alt="Winson&#039;s tech &amp; live" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">about</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-03-21T15:01:48.000Z" title="3/21/2022, 11:01:48 PM">2022-03-21</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-03-21T15:08:02.550Z" title="3/21/2022, 11:08:02 PM">2022-03-21</time></span><span class="level-item">5 minutes read (About 794 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">artifical intelligence</h1><div class="content"><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#search">search</a><ul>
+<li><a href="#terms-that-used">terms that used</a></li>
+<li><a href="#approach">Approach</a></li>
+<li><a href="#revised-approach">Revised Approach</a></li>
+<li><a href="#algorithm">algorithm</a><ul>
+<li><a href="#dfs">DFS</a></li>
+<li><a href="#bfs">BFS</a></li>
+<li><a href="#greedy-best-first-search">Greedy Best-First Search</a></li>
+<li><a href="#a-search">A* Search</a></li>
+<li><a href="#minimax-algorithm">minimax algorithm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#knowledge">Knowledge</a><ul>
+<li><a href="#terms-that-used-1">terms that used</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<style>
+  mark {background-color:yellow;}
+</style>
+
+
+<blockquote>
+<p>Harvard CS50.3 note</p>
+</blockquote>
+<h1><span id="search">search</span><a href="#search" class="header-anchor">#</a></h1><ul>
+<li>eg. driving route</li>
+</ul>
+<h2><span id="terms-that-used">terms that used</span><a href="#terms-that-used" class="header-anchor">#</a></h2><table>
+<thead>
+<tr>
+<th align="center">term</th>
+<th align="center">meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">agent</td>
+<td align="center">the object who perform actions</td>
+</tr>
+<tr>
+<td align="center">state</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">action <em>ACTION(s)</em></td>
+<td align="center">the actions agent got in specific state s</td>
+</tr>
+<tr>
+<td align="center">transition model <em>RESULT(s, a)</em></td>
+<td align="center">what&#x2019;s the result of performing action a in state s</td>
+</tr>
+<tr>
+<td align="center">state space</td>
+<td align="center">all states that you can get from initial state</td>
+</tr>
+<tr>
+<td align="center">goal test</td>
+<td align="center">way to determine whether a state is a goal state</td>
+</tr>
+<tr>
+<td align="center">path cost</td>
+<td align="center">numerical cost associated with a given path</td>
+</tr>
+<tr>
+<td align="center">solution</td>
+<td align="center">sequence of actions that leads from initial state to a goal state</td>
+</tr>
+</tbody></table>
+<ul>
+<li>to solve search problem we use <strong>node</strong> data structure</li>
+</ul>
+<h2><span id="approach">Approach</span><a href="#approach" class="header-anchor">#</a></h2><p>Start with a frontier that contains the initial state.<br>Start with an empty explored set.<br>if the frontier is empty, then no solution. Otherwise, remove a node from the frontier. If that node contains goal state, return solution. Else expand node.</p>
+<h2><span id="revised-approach">Revised Approach</span><a href="#revised-approach" class="header-anchor">#</a></h2><p>Start with a frontier that contains the initial state.<br>Start with an empty explored set.<br>if the frontier is empty, then no solution. Otherwise, remove a node from the frontier. If that node contains goal state, return solution. <strong>Add the node to the explored set.</strong> Expand node, add resulting nodes to the frontier <strong>only if they aren&#x2019;t already in the frontier or the explored set</strong></p>
+<h2><span id="algorithm">algorithm</span><a href="#algorithm" class="header-anchor">#</a></h2><table>
+<thead>
+<tr>
+<th align="center">attribute</th>
+<th align="center">DFS</th>
+<th align="center">BFS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">can always find the optimal path</td>
+<td align="center">Yes</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center">average move cost</td>
+<td align="center">less</td>
+<td align="center">more</td>
+</tr>
+</tbody></table>
+<p>As you can see, each of these two have drawbacks. So we take a look at what will a human think of this problem.</p>
+<h3><span id="dfs">DFS</span><a href="#dfs" class="header-anchor">#</a></h3><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> TB
+    Start<span class="token text string">(DFS)</span> <span class="token arrow operator">--&gt;</span> Move<span class="token text string">[Go straight until branch or end]</span>
+    Move <span class="token arrow operator">--&gt;</span> BranchOrEnd<span class="token text string">{Branch or end?}</span>
+    BranchOrEnd <span class="token arrow operator">--&gt;</span><span class="token label property">|End|</span> Goal<span class="token text string">{&quot;Is it the goal?&quot;}</span>
+    Goal <span class="token arrow operator">--&gt;</span><span class="token label property">|Yes|</span> End<span class="token text string">(End search)</span>
+    Goal <span class="token arrow operator">--&gt;</span><span class="token label property">|No|</span> TraceBack<span class="token text string">[Trace back to former branch]</span>
+    TraceBack <span class="token arrow operator">--&gt;</span> Move
+    BranchOrEnd <span class="token arrow operator">--&gt;</span><span class="token label property">|Branch|</span> Pick<span class="token text string">[Pick a side randomly]</span>
+    Pick <span class="token arrow operator">--&gt;</span> Move<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3><span id="bfs">BFS</span><a href="#bfs" class="header-anchor">#</a></h3><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> TB
+    Start<span class="token text string">(BFS)</span> <span class="token arrow operator">--&gt;</span> Move<span class="token text string">[move each thread a step forward]</span>
+    Move <span class="token arrow operator">--&gt;</span> SingleRoute<span class="token text string">{Is it a single route?}</span>
+    SingleRoute <span class="token arrow operator">--&gt;</span> <span class="token label property">|Yes|</span> Move
+    SingleRoute <span class="token arrow operator">--&gt;</span> <span class="token label property">|No|</span> BranchOrEnd<span class="token text string">{Branch or end?}</span>
+    BranchOrEnd <span class="token arrow operator">--&gt;</span><span class="token label property">|End|</span> Goal<span class="token text string">{&quot;Is it the goal?&quot;}</span>
+    Goal <span class="token arrow operator">--&gt;</span><span class="token label property">|Yes|</span> End<span class="token text string">(End searches)</span>
+    Goal <span class="token arrow operator">--&gt;</span><span class="token label property">|No|</span> ExitThread<span class="token text string">[Stop this thread]</span>
+    BranchOrEnd <span class="token arrow operator">--&gt;</span><span class="token label property">|Branch|</span> OpenThread<span class="token text string">[Open threads for each choice]</span>
+    OpenThread <span class="token arrow operator">--&gt;</span> Move<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>In these algorithm, BFS and DFS can be done in any time, no information required. While for the GBFS, information are used, in this case, coordinate of current location and endpoint. Search methods that don&#x2019;t use problem specific knowledge like BFS and DFS are uninformed search and GBFS are called informed search since it used problem specific knowledge.</p>
+<h3><span id="greedy-best-first-search">Greedy Best-First Search</span><a href="#greedy-best-first-search" class="header-anchor">#</a></h3><h4><span id="definition">definition</span><a href="#definition" class="header-anchor">#</a></h4><p>$index = h(n)$</p>
+<p>Calculate the estimate distance of each node to the goal using heuristic distance $h(n)$ (in the course Manhattan distance [^MD] was used, but there were more options like Diagonal Distance[^DD], Euclidean Distance[^ED]) in advanced and always pick the neighbor with the smallest index number when making decisions. </p>
+<p>[^MD]: Only available while agent is allow to move vertically and horizontally. $d = \Delta X + \Delta Y$<br>[^DD]: Only available while agent is allow to move diagonally. $d = D * (\Delta X + \Delta Y) + (D2 - 2 * D) * min(\Delta X, \Delta Y)$ <br> where D2 is the cost between two diagonally nearby node<br>[^ED]: Only available while agent can move toward any direction. $d = \sqrt{(\Delta X)^2 + (\Delta Y)^2}$</p>
+<h3><span id="a-search">A* Search</span><a href="#a-search" class="header-anchor">#</a></h3><h4><span id="definition">definition</span><a href="#definition" class="header-anchor">#</a></h4><p>$index = h(n) + g(n)$</p>
+<p>Add up the heuristic distance $h(n)$ and the steps needed to get there $s(n)$ of each position in advanced and always pick the neighbor with the smallest index number when making decisions.</p>
+<h4><span id="restrains">restrains</span><a href="#restrains" class="header-anchor">#</a></h4><p>A* Search is a optimal search algorithm only when:</p>
+<ol>
+<li>$h(n)$ is admissible (never overestimates the true cost)</li>
+<li>$h(n)$ is consistent (for every node $n$ and successor $n&#x2019;$ with step cost $c$, $h(n) &#x2264;h(n&#x2019;) + c$)</li>
+</ol>
+<h3><span id="minimax-algorithm">minimax algorithm</span><a href="#minimax-algorithm" class="header-anchor">#</a></h3><p>This algorithm works very well when it comes to <mark>two player games</mark> like tik-tac-toe or go chess(aka. weiqi)</p>
+<p>Use different value to descript each end situation of the game. As for tik-tac-toe, O wins can be value -1, even can be value 0 while X wins can be value 1. And in this case the goal of players can be simplied into try to get a smaller value or a biger value.</p>
+<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> TB
+    A<span class="token text string">[A big]</span> <span class="token arrow operator">--&gt;</span> B1<span class="token text string">[B small]</span>
+    A <span class="token arrow operator">--&gt;</span> B2<span class="token text string">[B2 small]</span>
+    B1 <span class="token arrow operator">--&gt;</span> C1<span class="token text string">[C1 big:0]</span>
+    B2 <span class="token arrow operator">--&gt;</span> C2<span class="token text string">[C2 big:1]</span>
+    B2 <span class="token arrow operator">--&gt;</span> C3<span class="token text string">[C3 big:-1]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Ways to optimize the algorithm</p>
+<ul>
+<li>Alpha-beta Pruning</li>
+<li>Evaluation funciton</li>
+</ul>
+<h1><span id="knowledge">Knowledge</span><a href="#knowledge" class="header-anchor">#</a></h1><h2><span id="terms-that-used">terms that used</span><a href="#terms-that-used" class="header-anchor">#</a></h2><table>
+<thead>
+<tr>
+<th align="center">term</th>
+<th align="center">meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">sentence</td>
+<td align="center">an assertion about the world</td>
+</tr>
+<tr>
+<td align="center">knowledge base</td>
+<td align="center">a set of sentences known by a knowledge-based agent</td>
+</tr>
+<tr>
+<td align="center">entailment</td>
+<td align="center">if a entails b then whenever a is true b is also true</td>
+</tr>
+<tr>
+<td align="center">inference</td>
+<td align="center">the process of deriving new sentences form old ones</td>
+</tr>
+</tbody></table>
+<p>Not<br>And<br>Or<br>Implicate<br>Biconditional</p>
+<p><em>to be continued</em></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>artifical intelligence</p><p><a href="http://victorwinson.github.io/2022/03/21/artifical-intelligence/">http://victorwinson.github.io/2022/03/21/artifical-intelligence/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>VictorWinson</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-03-21</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-03-21</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/self-taught/">self-taught</a><a class="link-muted mr-2" rel="tag" href="/tags/CS/">CS</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/03/21/zheng-ze-biao-da-shi/"><span class="level-item">正则表达式</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/milk-bottle.svg" alt="MilkBottle"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">MilkBottle</p><p class="is-size-6 is-block">CS undergraduate student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">12</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">16</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://space.bilibili.com/115292872" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/VictorWinson"><i class="fab fa-github"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/tossing-around/"><span class="level-start"><span class="level-item">tossing around</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-21T15:01:48.000Z">2022-03-21</time></p><p class="title"><a href="/2022/03/21/artifical-intelligence/">artifical intelligence</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-21T14:19:49.000Z">2022-03-21</time></p><p class="title"><a href="/2022/03/21/zheng-ze-biao-da-shi/">正则表达式</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:23:35.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/sql-learning/">SQL learning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:21:03.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/unix-basic-commands/">UNIX basic commands</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-20T15:18:28.000Z">2022-02-20</time></p><p class="title"><a href="/2022/02/20/shell-basic/">shell basic</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">February 2022</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CS/"><span class="tag">CS</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NAS/"><span class="tag">NAS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UNIX/"><span class="tag">UNIX</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UNIX-linux/"><span class="tag">UNIX/linux</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blockchain/"><span class="tag">blockchain</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/optimizing/"><span class="tag">optimizing</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/raspberry-pi/"><span class="tag">raspberry pi</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/school-course/"><span class="tag">school course</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/self-taught/"><span class="tag">self-taught</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/shell/"><span class="tag">shell</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/system-security/"><span class="tag">system security</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tools/"><span class="tag">tools</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tossing-around/"><span class="tag">tossing around</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E6%96%87/"><span class="tag">中文</span><span class="tag">3</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/milk-bottle.svg" alt="Winson&#039;s tech &amp; live" height="28"></a><p class="is-size-7"><span>&copy; 2022 VictorWinson</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
