@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>nmap</title>
+      <link href="/2022/03/22/nmap/"/>
+      <url>/2022/03/22/nmap/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="what-is-nmap">what is nmap</span><a href="#what-is-nmap" class="header-anchor">#</a></h1><p>conclusion of what can nmap does:</p><ul><li>host discovery</li><li>port discovery/ enumeration</li><li>service discovery</li><li>OS version detection</li><li>MAC address detection</li><li>service version detection (eg. apache nginx mysql)</li><li>vulnerability/ exploit detection, using namp scripts</li><li>nmap IDS/ portscan deteciton</li></ul><h1><span id="simple-commands">simple commands</span><a href="#simple-commands" class="header-anchor">#</a></h1><h2><span id="namp-sp-192-168-0-0-16"><code>namp -sP 192.168.0.0/16</code></span><a href="#namp-sp-192-168-0-0-16" class="header-anchor">#</a></h2><p><code>/16</code> scan from 192.168.0.1 - 192.168.254.254<br><code>-sP</code> stands for ping scan</p><h2><span id="namp-p-1-1000-pn-sv-ss-t4-target"><code>namp -p 1-1000 -Pn -sV -sS -T4 target</code></span><a href="#namp-p-1-1000-pn-sv-ss-t4-target" class="header-anchor">#</a></h2><p><code>-p 1-1000</code> specify port 1-1000<br><code>-sV</code> service version deteciton<br><code>T4</code> scaning speed(1-5), larger number usully fast but could lead to inaccurate.<br><code>-sS</code> SYN scan<br><code>Pn</code> treat all host online</p><h2><span id="nmap-v-ss-a-t4-target"><code>nmap -v -sS -A -T4 target</code></span><a href="#nmap-v-ss-a-t4-target" class="header-anchor">#</a></h2><p><code>-v</code> verbose output<br><code>-A</code> <em>ALL</em> usually quite slow (include OS and version detection + traceroute and scripts against target services)</p><h2><span id="namp-o-sv-ss-t5-target"><code>namp -O -sV -sS -T5 target</code></span><a href="#namp-o-sv-ss-t5-target" class="header-anchor">#</a></h2><p><code>-O</code> OS and version detection</p><h2><span id="nmap-il-ip-address-txt"><code>nmap -iL ip-address.txt</code></span><a href="#nmap-il-ip-address-txt" class="header-anchor">#</a></h2><p>scan IPs from files</p><h2><span id="nmap-p-target"><code>nmap -p- target</code></span><a href="#nmap-p-target" class="header-anchor">#</a></h2><p>nmap scan all ports</p><h2><span id="nmap-og-grep-output-txt-target"><code>nmap -oG grep-output.txt target</code></span><a href="#nmap-og-grep-output-txt-target" class="header-anchor">#</a></h2><p><code>oG</code> grepable output</p><h2><span id="nmap-target-webxml-ox-xsltproc-output-file-html"><code>nmap target --webxml -oX - | xsltproc --output file.html -</code></span><a href="#nmap-target-webxml-ox-xsltproc-output-file-html" class="header-anchor">#</a></h2><p>output a HTML report</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> self-taught </tag>
+            
+            <tag> CS </tag>
+            
+            <tag> network </tag>
+            
+            <tag> pen test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>artifical intelligence</title>
       <link href="/2022/03/21/artifical-intelligence/"/>
       <url>/2022/03/21/artifical-intelligence/</url>
@@ -133,11 +158,11 @@
             
             <tag> UNIX/linux </tag>
             
-            <tag> tossing around </tag>
-            
             <tag> system security </tag>
             
             <tag> raspberry pi </tag>
+            
+            <tag> tossing around </tag>
             
         </tags>
       
@@ -162,9 +187,9 @@
             
             <tag> UNIX/linux </tag>
             
-            <tag> 中文 </tag>
-            
             <tag> tools </tag>
+            
+            <tag> 中文 </tag>
             
         </tags>
       
